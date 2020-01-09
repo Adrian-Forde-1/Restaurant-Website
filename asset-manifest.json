@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Restaurant-Website/static/css/main.d1b05096.chunk.css",
+    "main.js": "/Restaurant-Website/static/js/main.828825d6.chunk.js",
+    "main.js.map": "/Restaurant-Website/static/js/main.828825d6.chunk.js.map",
+    "runtime-main.js": "/Restaurant-Website/static/js/runtime-main.11425872.js",
+    "runtime-main.js.map": "/Restaurant-Website/static/js/runtime-main.11425872.js.map",
+    "static/js/2.794d898b.chunk.js": "/Restaurant-Website/static/js/2.794d898b.chunk.js",
+    "static/js/2.794d898b.chunk.js.map": "/Restaurant-Website/static/js/2.794d898b.chunk.js.map",
+    "index.html": "/Restaurant-Website/index.html",
+    "precache-manifest.acd0e5b8d8e79c2c2d8267843253c36a.js": "/Restaurant-Website/precache-manifest.acd0e5b8d8e79c2c2d8267843253c36a.js",
+    "service-worker.js": "/Restaurant-Website/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/Restaurant-Website/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.794d898b.chunk.js.LICENSE": "/Restaurant-Website/static/js/2.794d898b.chunk.js.LICENSE",
+    "static/media/logo.svg": "/Restaurant-Website/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.11425872.js",
+    "static/js/2.794d898b.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.828825d6.chunk.js"
+  ]
+}
