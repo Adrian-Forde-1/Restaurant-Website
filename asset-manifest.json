@@ -1,23 +1,31 @@
 {
   "files": {
-    "main.css": "/Restaurant-Website/static/css/main.d1b05096.chunk.css",
-    "main.js": "/Restaurant-Website/static/js/main.828825d6.chunk.js",
-    "main.js.map": "/Restaurant-Website/static/js/main.828825d6.chunk.js.map",
+    "main.css": "/Restaurant-Website/static/css/main.101a175f.chunk.css",
+    "main.js": "/Restaurant-Website/static/js/main.28c1c1fc.chunk.js",
+    "main.js.map": "/Restaurant-Website/static/js/main.28c1c1fc.chunk.js.map",
     "runtime-main.js": "/Restaurant-Website/static/js/runtime-main.11425872.js",
     "runtime-main.js.map": "/Restaurant-Website/static/js/runtime-main.11425872.js.map",
-    "static/js/2.794d898b.chunk.js": "/Restaurant-Website/static/js/2.794d898b.chunk.js",
-    "static/js/2.794d898b.chunk.js.map": "/Restaurant-Website/static/js/2.794d898b.chunk.js.map",
+    "static/js/2.dc6b9131.chunk.js": "/Restaurant-Website/static/js/2.dc6b9131.chunk.js",
+    "static/js/2.dc6b9131.chunk.js.map": "/Restaurant-Website/static/js/2.dc6b9131.chunk.js.map",
     "index.html": "/Restaurant-Website/index.html",
-    "precache-manifest.acd0e5b8d8e79c2c2d8267843253c36a.js": "/Restaurant-Website/precache-manifest.acd0e5b8d8e79c2c2d8267843253c36a.js",
+    "precache-manifest.fefb27b646f73054619f54e7c0f1e3c9.js": "/Restaurant-Website/precache-manifest.fefb27b646f73054619f54e7c0f1e3c9.js",
     "service-worker.js": "/Restaurant-Website/service-worker.js",
-    "static/css/main.d1b05096.chunk.css.map": "/Restaurant-Website/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.794d898b.chunk.js.LICENSE": "/Restaurant-Website/static/js/2.794d898b.chunk.js.LICENSE",
-    "static/media/logo.svg": "/Restaurant-Website/static/media/logo.5d5d9eef.svg"
+    "static/css/main.101a175f.chunk.css.map": "/Restaurant-Website/static/css/main.101a175f.chunk.css.map",
+    "static/js/2.dc6b9131.chunk.js.LICENSE": "/Restaurant-Website/static/js/2.dc6b9131.chunk.js.LICENSE",
+    "static/media/style.css": "/Restaurant-Website/static/media/Nuts_and_Ingredients.52ff61e3.jpg",
+    "static/media/brown_octopus_on_plate.jpg": "/Restaurant-Website/static/media/brown_octopus_on_plate.d05af36b.jpg",
+    "static/media/fruits-and-vegetables.png": "/Restaurant-Website/static/media/fruits-and-vegetables.cc02fdc4.png",
+    "static/media/grilled_steak_near_steak_knife.jpg": "/Restaurant-Website/static/media/grilled_steak_near_steak_knife.9181cb00.jpg",
+    "static/media/oyster_on_bowl.jpg": "/Restaurant-Website/static/media/oyster_on_bowl.3b09d3a2.jpg",
+    "static/media/oysters_on_ceramic_plate.jpg": "/Restaurant-Website/static/media/oysters_on_ceramic_plate.b8000b03.jpg",
+    "static/media/recipePicture.png": "/Restaurant-Website/static/media/recipePicture.622744ea.png",
+    "static/media/sushi_dish.jpg": "/Restaurant-Website/static/media/sushi_dish.50575774.jpg",
+    "static/media/timerIcon.png": "/Restaurant-Website/static/media/timerIcon.09cdd3e9.png"
   },
   "entrypoints": [
     "static/js/runtime-main.11425872.js",
-    "static/js/2.794d898b.chunk.js",
-    "static/css/main.d1b05096.chunk.css",
-    "static/js/main.828825d6.chunk.js"
+    "static/js/2.dc6b9131.chunk.js",
+    "static/css/main.101a175f.chunk.css",
+    "static/js/main.28c1c1fc.chunk.js"
   ]
 }
