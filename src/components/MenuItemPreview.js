@@ -5,7 +5,6 @@ import GrilledSteakNearSteakKnife from '../Resources/Images/grilled_steak_near_s
 import OysterOnBowl from '../Resources/Images/oyster_on_bowl.jpg';
 import SushiDish from '../Resources/Images/sushi_dish.jpg';
 import BrownOctopusOnPlate from '../Resources/Images/brown_octopus_on_plate.jpg';
-import Modal from './Modal';
 
 const MenuItemPreview = props => {
   const item = props.item;
@@ -35,7 +34,7 @@ const MenuItemPreview = props => {
     console.log('Blur Called');
     const rootElement = document.getElementById('root');
     console.log(rootElement);
-    rootElement.style.filter = 'blur(4px)';
+    rootElement.style.filter = 'blur(15px)';
     rootElement.blur();
     enableFocus();
   };
@@ -54,9 +53,10 @@ const MenuItemPreview = props => {
     const img = document.createElement('img');
     const exit = document.createElement('button');
     const exitNode = document.createElement('i');
-    const modalBoday = document.createElement('div');
+    const modalBody = document.createElement('div');
     const price = document.createElement('div');
     const priceTextNode = document.createTextNode('$' + item.price);
+    const imgContainer = document.createElement('div');
 
     renderModal.style.background = 'none';
     rootElement.style.pointerEvents = 'none';
@@ -69,10 +69,11 @@ const MenuItemPreview = props => {
         }
       });
     }
-    container.style.pointerEvents = 'auto';
     img.src = itemImg;
     img.style.width = '100%';
-    img.style.height = '70%';
+    img.style.height = '100%';
+    imgContainer.style.height = '100%';
+    imgContainer.appendChild(img);
 
     exit.style.color = redColor;
     exit.style.position = 'absolute';
@@ -95,15 +96,13 @@ const MenuItemPreview = props => {
     price.style.borderRadius = '5px';
     price.style.background = redColor;
     price.style.color = '#202124';
+    price.style.marginTop = '10px';
     price.style.fontWeight = 'bold';
 
-    //Container styling
-    container.style.width = '70%';
-
     //Creating the body to hold the name, description and price
-    modalBoday.classList.add('modal-body');
-    modalBoday.style.backgroundColor = '#202124';
-    modalBoday.style.height = '100%';
+    modalBody.classList.add('modal-body');
+    modalBody.style.backgroundColor = '#202124';
+    modalBody.style.height = '80%';
 
     //Create Name Element and adding the text node for the element
     const name = document.createElement('h6');
@@ -120,29 +119,45 @@ const MenuItemPreview = props => {
     description.appendChild(descriptionTextNode);
     description.style.color = 'white';
     description.style.fontWeight = 'lighter';
+    description.style.marginTop = '10px';
 
-    //Adding the modal class to container
-    container.classList.add('modal');
-    container.style.zIndex = '10000';
+    //Container styling
+    container.style.pointerEvents = 'auto';
+    container.style.width = '60%';
+    container.style.minWidth = '60%';
+    container.style.height = '50vh';
+    container.style.zIndex = '100000';
     container.style.borderRadius = '20px';
-    container.style.transform = 'translate(20%, 5%)';
+    container.style.transform = 'translate(30%, 10%)';
+    container.style.position = 'fixed';
+    container.classList.add('menu-item-container');
 
     //Adding the name, description, price and spacer to body
-    modalBoday.appendChild(name);
-    modalBoday.appendChild(textSpacer);
-    modalBoday.appendChild(description);
-    modalBoday.appendChild(price);
+    modalBody.appendChild(name);
+    modalBody.appendChild(textSpacer);
+    modalBody.appendChild(description);
+    modalBody.appendChild(price);
 
     //Adding the body to the container
     container.appendChild(exit);
-    container.appendChild(img);
-    container.appendChild(modalBoday);
-    console.log(container);
+    container.appendChild(imgContainer);
+    container.appendChild(modalBody);
+
+    const tester = document.createElement('div');
+    tester.style.width = '80%';
+    tester.style.height = '80vh';
+    tester.style.background = 'blue';
 
     renderModal.appendChild(container);
+    console.log(renderModal);
+    // console.log(rootElement);
+
+    // renderModal.childNodes.forEach(child => {
+    //   if (child == container) console.log('Match');
+    //   else console.log('No Match');
+    // });
 
     exit.addEventListener('click', () => {
-      console.log(renderModal);
       renderModal.removeChild(container);
 
       rootElement.style.filter = 'blur(0)';

@@ -5,6 +5,27 @@
   scroll-behavior: smooth;
 }
 
+.render-modal {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  right: 500px;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: red;
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .Logo {
   color: #f34235 !important;
 }
@@ -91,10 +112,19 @@
   background-color: #f34235 !important;
 }
 
-.modal {
-  display: block;
-  width: 50%;
-  height: 90vh;
+.modal-boddy {
+  color: white !important;
+}
+
+.modal-boddy h6 {
+  font-size: 20px;
+  color: #f34235;
+  margin-top: 50px !important;
+}
+
+.modal-boddy p {
+  color: white;
+  font-weight: lighter;
 }
 
 .menu-section {
