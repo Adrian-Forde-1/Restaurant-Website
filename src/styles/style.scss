@@ -327,7 +327,33 @@ footer {
   }
 }
 
+.reservation {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('../Resources/Images/Nuts_and_Ingredients.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 0px !important;
+}
+
+.form-container {
+  border-radius: 20px;
+  width: auto;
+  height: auto;
+  background-color: white;
+  padding: 50px 40px;
+}
+
 @media (min-width: 576px) {
+  form select,
+  form input {
+    width: auto;
+    // padding: 10px 0px !important;
+  }
   .badge {
     right: 10px;
     top: 40px;
@@ -479,6 +505,12 @@ footer {
 }
 
 @media (min-width: 768px) {
+  form select,
+  form input {
+    width: 400px !important;
+    // padding: 10px 0px !important;
+  }
+
   .badge {
     border-radius: 50%;
     width: 50px;
@@ -623,6 +655,12 @@ footer {
 }
 
 @media (min-width: 992px) {
+  form select,
+  form input {
+    width: 500px !important;
+    // padding: 10px 0px !important;
+  }
+
   .nav-link {
     position: relative;
     padding: 0;

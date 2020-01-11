@@ -1,20 +1,24 @@
 import React from 'react';
-import {BrowserRouter, Route} from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Footer from "./components/Footer";
+import { BrowserRouter, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Footer from './components/Footer';
+import Reservation from './components/Reservation';
+import ReservationNavbar from './components/ReservationNavbar';
 
 function App() {
   return (
     <BrowserRouter>
-    <div className="App">
-      <Navbar />
+      <div className='App'>
+        {/* <Navbar /> */}
 
-      <Route exact path="/" component={Home} />
-      
+        <Route exact path='/' component={Navbar} />
+        <Route exact path='/' component={Home} />
+        <Route path='/reservation' component={ReservationNavbar} />
+        <Route path='/reservation' component={Reservation} />
 
-      <Footer/>
-    </div>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }

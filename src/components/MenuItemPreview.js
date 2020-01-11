@@ -102,7 +102,7 @@ const MenuItemPreview = props => {
     //Creating the body to hold the name, description and price
     modalBody.classList.add('modal-body');
     modalBody.style.backgroundColor = '#202124';
-    modalBody.style.height = '80%';
+    modalBody.style.minHeight = '80%';
 
     //Create Name Element and adding the text node for the element
     const name = document.createElement('h6');

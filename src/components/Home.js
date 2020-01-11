@@ -130,7 +130,7 @@ class Home extends Component {
                     <p className='mb-4'>
                       Cuisine like you've never tasted before
                     </p>
-                    <Link to='#' className='btn'>
+                    <Link to='/reservation' className='btn'>
                       Make Reservation
                     </Link>
                   </div>
@@ -146,7 +146,7 @@ class Home extends Component {
                       <span className='Logo'>Quality</span> Comes First
                     </h1>
                     <p className='mb-4'>Made With Precision And Care</p>
-                    <Link to='#' className='btn'>
+                    <Link to='/reservation' className='btn'>
                       Make Reservation
                     </Link>
                   </div>
@@ -162,7 +162,7 @@ class Home extends Component {
                       <span className='Logo'>Fresh</span> Ingredients
                     </h1>
                     <p className='mb-4'>Savory And Impactful Flavors</p>
-                    <Link to='#' className='btn'>
+                    <Link to='/reservation' className='btn'>
                       Make Reservation
                     </Link>
                   </div>
