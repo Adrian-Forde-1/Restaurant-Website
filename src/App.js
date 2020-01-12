@@ -14,7 +14,7 @@ function App() {
 
         <Route exact path='/' component={Navbar} />
         <Route exact path='/' component={Home} />
-        <Route path='/reservation' component={ReservationNavbar} />
+        <Route exact path='/reservation' component={ReservationNavbar} />
         <Route path='/reservation' component={Reservation} />
 
         <Footer />

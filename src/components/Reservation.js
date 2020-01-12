@@ -1,6 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Reservation = () => {
+  const [selectedDate, changeSelectedDate] = useState(null);
+  window.navActive = false;
+  window.scrollTo(0, 0);
+
+  useEffect(() => {
+    isInPast();
+  }, [selectedDate]);
+
+  const setDate = e => {
+    changeSelectedDate(e.target.valueAsDate);
+  };
+
+  const isInPast = () => {
+    var now = new Date();
+    now.setHours(0, 0, 0, 0);
+    if (selectedDate < now) document.getElementById('date').value = null;
+  };
   return (
     <div className='reservation'>
       <div className='container d-flex justify-content-center align-items-center'>
@@ -17,11 +34,18 @@ const Reservation = () => {
                 <option value='3'>3 Persons</option>
                 <option value='4'>4 Persons</option>
                 <option value='5'>5 Persons</option>
+                <option value='6'>6 Persons</option>
               </select>
             </div>
 
             <div className='form-group'>
-              <input type='date' className='form-control' required />
+              <input
+                id='date'
+                type='date'
+                className='form-control'
+                required
+                onChange={setDate}
+              />
             </div>
 
             <div className='form-group'>
@@ -53,7 +77,7 @@ const Reservation = () => {
                 cols='30'
                 rows='5'
                 className='form-control'
-                maxLength='200'
+                maxLength='150'
                 placeholder='Enter some extra infromation'
               ></textarea>
             </div>

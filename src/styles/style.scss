@@ -26,6 +26,8 @@ $red-color: #f34235;
 }
 
 .navigation {
+  z-index: 10000;
+  position: fixed;
   background: rgba(0, 0, 0, 0);
   color: white;
   width: 100%;
@@ -142,7 +144,7 @@ $red-color: #f34235;
 
 .menu-section {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url('../Resources/Images/Nuts_and_Ingredients.jpg') no-repeat center;
+    url('../Resources/Images/Nuts_and_Ingredients.webp') no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   height: auto;
@@ -334,7 +336,7 @@ footer {
   align-items: center;
   // height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url('../Resources/Images/Nuts_and_Ingredients.jpg') no-repeat center;
+    url('../Resources/Images/Nuts_and_Ingredients.webp') no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   margin-bottom: 0px !important;

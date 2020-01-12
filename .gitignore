@@ -21,3 +21,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Unused Images
+JPG Images
+src/Resources/Images/unoptamized-Nuts_and_Ingredients.jpg
+src/Resources/Images/unoptamized-brown_octopus_on_plate.jpg
+src/Resources/Images/unoptamized-grilled_steak_near_steak_knife.jpg
+src/Resources/Images/unoptamized-oyster_on_bowl.jpg
+src/Resources/Images/unoptamized-oysters_on_ceramic_plate.jpg
+src/Resources/Images/unoptamized-raw_meat_ingredient.jpg
+src/Resources/Images/unoptamized-sushi_dish.jpg

@@ -1,17 +1,99 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 //Item Images
-import GrilledSteakNearSteakKnife from '../Resources/Images/grilled_steak_near_steak_knife.jpg';
-import OysterOnBowl from '../Resources/Images/oyster_on_bowl.jpg';
-import SushiDish from '../Resources/Images/sushi_dish.jpg';
-import BrownOctopusOnPlate from '../Resources/Images/brown_octopus_on_plate.jpg';
+import GrilledSteakNearSteakKnife from '../Resources/Images/grilled_steak_near_steak_knife.webp';
+import OysterOnBowl from '../Resources/Images/oyster_on_bowl.webp';
+import SushiDish from '../Resources/Images/sushi_dish.webp';
+import BrownOctopusOnPlate from '../Resources/Images/brown_octopus_on_plate.webp';
+
+window.navActive = true;
 
 const MenuItemPreview = props => {
+  const [modalWidth, setModalWidth] = useState();
+  const [modalXTranslate, setModalXTranslate] = useState();
+  const [menuItemCanBeRendered, setMenuItemCanBeRendered] = useState(false);
+
+  useEffect(() => {
+    var windowWidth = window.innerWidth;
+    if (windowWidth > 700) {
+      menuItemLargeMQ = false;
+      menuItemSmallMQ = true;
+      setModalWidth(50);
+      setModalXTranslate(50);
+    }
+
+    if (windowWidth <= 700) {
+      menuItemLargeMQ = true;
+      menuItemSmallMQ = false;
+      setModalWidth(80);
+      setModalXTranslate(12);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (menuItemCanBeRendered) showMenuItemInfo();
+  }, [menuItemCanBeRendered]);
+
+  useEffect(() => {
+    if (menuItemCanBeRendered) {
+      const renderModal = document.getElementById('render-modal');
+      const container = document.querySelectorAll('.menu-item-container');
+      container.forEach(contain => renderModal.removeChild(contain));
+      // renderModal.removeChild(container);
+      showMenuItemInfo();
+    }
+  }, [modalWidth, modalXTranslate]);
+
+  window.addEventListener('resize', () => {
+    // var currentWindowMaxWidth = window.matchMedia('(max-width: 700px)');
+    // var currentWindowMinWidth = window.matchMedia('(min-width: 701px)');
+    // if (currentWindowMaxWidth.matches) {
+    //   setModalWidth(80);
+    //   setModalXTranslate(15);
+    // }
+
+    // if (currentWindowMinWidth.matches) {
+    //   setModalWidth(50);
+    //   setModalXTranslate(50);
+    // }
+    // if (menuItemCanBeRendered) {
+    //   if (currentWindowMaxWidth.matches) {
+    //     const container = document.querySelector('.menu-item-container');
+    //     container.style.width = '80%';
+    //     container.style.transform = 'translate(15%, 10%)';
+    //   }
+
+    //   if (currentWindowMinWidth.matches) {
+    //     const container = document.querySelector('.menu-item-container');
+    //     container.style.width = '50%';
+    //     container.style.transform = 'translate(50%, 10%)';
+    //   }
+    // }
+    var windowWidth = window.innerWidth;
+    if (windowWidth > 700) {
+      if (menuItemLargeMQ === false) {
+        menuItemLargeMQ = true;
+        menuItemSmallMQ = false;
+        setModalWidth(50);
+        setModalXTranslate(50);
+      }
+    } else if (windowWidth <= 700) {
+      if (menuItemSmallMQ === false) {
+        menuItemLargeMQ = false;
+        menuItemSmallMQ = true;
+        setModalWidth(80);
+        setModalXTranslate(12);
+      }
+    }
+  });
+
   const item = props.item;
+  const redColor = '#f34235';
   var itemImg = null;
+  var menuItemSmallMQ = false;
+  var menuItemLargeMQ = false;
 
   // Colors
-  const redColor = '#f34235';
 
   switch (item.imgSrc) {
     case 'SushiDish':
@@ -31,140 +113,136 @@ const MenuItemPreview = props => {
   }
 
   const enableBlur = () => {
-    console.log('Blur Called');
     const rootElement = document.getElementById('root');
-    console.log(rootElement);
+
     rootElement.style.filter = 'blur(15px)';
     rootElement.blur();
     enableFocus();
   };
 
   const enableFocus = () => {
-    console.log('Focus Called');
     const renderModal = document.getElementById('render-modal');
     renderModal.focus();
   };
 
   const showMenuItemInfo = () => {
-    enableBlur();
-    const renderModal = document.getElementById('render-modal');
-    const rootElement = document.getElementById('root');
-    const container = document.createElement('div');
-    const img = document.createElement('img');
-    const exit = document.createElement('button');
-    const exitNode = document.createElement('i');
-    const modalBody = document.createElement('div');
-    const price = document.createElement('div');
-    const priceTextNode = document.createTextNode('$' + item.price);
-    const imgContainer = document.createElement('div');
+    if (menuItemCanBeRendered) {
+      enableBlur();
+      const renderModal = document.getElementById('render-modal');
+      const rootElement = document.getElementById('root');
+      const container = document.createElement('div');
+      const img = document.createElement('img');
+      const exit = document.createElement('button');
+      const exitNode = document.createElement('i');
+      const modalBody = document.createElement('div');
+      const price = document.createElement('div');
+      const priceTextNode = document.createTextNode('$' + item.price);
+      const imgContainer = document.createElement('div');
 
-    renderModal.style.background = 'none';
-    rootElement.style.pointerEvents = 'none';
+      renderModal.style.background = 'none';
+      rootElement.style.pointerEvents = 'none';
 
-    const renderModalChildNodes = renderModal.childNodes;
-    if (renderModalChildNodes.length > 0) {
-      renderModalChildNodes.forEach(child => {
-        if (child.classList.contains('modal')) {
-          renderModal.removeChild(child);
-        }
+      const renderModalChildNodes = renderModal.childNodes;
+      if (renderModalChildNodes.length > 0) {
+        renderModalChildNodes.forEach(child => {
+          if (child.classList.contains('modal')) {
+            renderModal.removeChild(child);
+          }
+        });
+      }
+      img.src = itemImg;
+      img.style.width = '100%';
+      img.style.height = '100%';
+      imgContainer.style.height = '100%';
+      imgContainer.appendChild(img);
+
+      exit.style.color = redColor;
+      exit.style.position = 'absolute';
+      exit.style.right = '0';
+      exit.style.marginRight = '30px';
+      exit.style.marginTop = '30px';
+      exit.style.background = 'none';
+      exit.style.border = 'none';
+
+      exitNode.classList.add('fas');
+      exitNode.classList.add('fa-window-close');
+      exitNode.style.fontSize = '20px';
+
+      exit.appendChild(exitNode);
+
+      price.appendChild(priceTextNode);
+      price.style.height = 'auto';
+      price.style.width = '75px';
+      price.style.padding = '2px 5px';
+      price.style.borderRadius = '5px';
+      price.style.background = redColor;
+      price.style.color = '#202124';
+      price.style.marginTop = '10px';
+      price.style.fontWeight = 'bold';
+
+      //Creating the body to hold the name, description and price
+      modalBody.classList.add('modal-body');
+      modalBody.style.backgroundColor = '#202124';
+      modalBody.style.minHeight = '80%';
+
+      //Create Name Element and adding the text node for the element
+      const name = document.createElement('h6');
+      const nameTextNode = document.createTextNode(item.name);
+      name.appendChild(nameTextNode);
+      name.style.color = redColor;
+      name.style.fontSize = '20px';
+
+      const textSpacer = document.createTextNode('\n');
+
+      //Creating Description Element and adding the text node for the element
+      const description = document.createElement('p');
+      const descriptionTextNode = document.createTextNode(item.description);
+      description.appendChild(descriptionTextNode);
+      description.style.color = 'white';
+      description.style.fontWeight = 'lighter';
+      description.style.marginTop = '10px';
+
+      //Container styling
+      container.style.pointerEvents = 'auto';
+      container.style.width = `${modalWidth}%`;
+      container.style.minWidth = `${modalWidth}%`;
+      container.style.height = '50vh';
+      container.style.zIndex = '8000';
+      container.style.borderRadius = '20px';
+      container.style.transform = `translate(${modalXTranslate}%, 10%)`;
+      container.style.position = 'fixed';
+      container.classList.add('menu-item-container');
+
+      //Adding the name, description, price and spacer to body
+      modalBody.appendChild(name);
+      modalBody.appendChild(textSpacer);
+      modalBody.appendChild(description);
+      modalBody.appendChild(price);
+
+      //Adding the body to the container
+      container.appendChild(exit);
+      container.appendChild(imgContainer);
+      container.appendChild(modalBody);
+
+      const tester = document.createElement('div');
+      tester.style.width = '80%';
+      tester.style.height = '80vh';
+      tester.style.background = 'blue';
+
+      renderModal.appendChild(container);
+
+      exit.addEventListener('click', () => {
+        setMenuItemCanBeRendered(false);
+        renderModal.removeChild(container);
+        // const navigationBar = document.querySelector('.navigation');
+        // navigationBar.style.position = 'fixed';
+
+        rootElement.style.filter = 'blur(0)';
+        rootElement.focus();
+
+        rootElement.style.pointerEvents = 'auto';
       });
     }
-    img.src = itemImg;
-    img.style.width = '100%';
-    img.style.height = '100%';
-    imgContainer.style.height = '100%';
-    imgContainer.appendChild(img);
-
-    exit.style.color = redColor;
-    exit.style.position = 'absolute';
-    exit.style.right = '0';
-    exit.style.marginRight = '30px';
-    exit.style.marginTop = '30px';
-    exit.style.background = 'none';
-    exit.style.border = 'none';
-
-    exitNode.classList.add('fas');
-    exitNode.classList.add('fa-window-close');
-    exitNode.style.fontSize = '20px';
-
-    exit.appendChild(exitNode);
-
-    price.appendChild(priceTextNode);
-    price.style.height = 'auto';
-    price.style.width = '75px';
-    price.style.padding = '2px 5px';
-    price.style.borderRadius = '5px';
-    price.style.background = redColor;
-    price.style.color = '#202124';
-    price.style.marginTop = '10px';
-    price.style.fontWeight = 'bold';
-
-    //Creating the body to hold the name, description and price
-    modalBody.classList.add('modal-body');
-    modalBody.style.backgroundColor = '#202124';
-    modalBody.style.minHeight = '80%';
-
-    //Create Name Element and adding the text node for the element
-    const name = document.createElement('h6');
-    const nameTextNode = document.createTextNode(item.name);
-    name.appendChild(nameTextNode);
-    name.style.color = redColor;
-    name.style.fontSize = '20px';
-
-    const textSpacer = document.createTextNode('\n');
-
-    //Creating Description Element and adding the text node for the element
-    const description = document.createElement('p');
-    const descriptionTextNode = document.createTextNode(item.description);
-    description.appendChild(descriptionTextNode);
-    description.style.color = 'white';
-    description.style.fontWeight = 'lighter';
-    description.style.marginTop = '10px';
-
-    //Container styling
-    container.style.pointerEvents = 'auto';
-    container.style.width = '60%';
-    container.style.minWidth = '60%';
-    container.style.height = '50vh';
-    container.style.zIndex = '100000';
-    container.style.borderRadius = '20px';
-    container.style.transform = 'translate(30%, 10%)';
-    container.style.position = 'fixed';
-    container.classList.add('menu-item-container');
-
-    //Adding the name, description, price and spacer to body
-    modalBody.appendChild(name);
-    modalBody.appendChild(textSpacer);
-    modalBody.appendChild(description);
-    modalBody.appendChild(price);
-
-    //Adding the body to the container
-    container.appendChild(exit);
-    container.appendChild(imgContainer);
-    container.appendChild(modalBody);
-
-    const tester = document.createElement('div');
-    tester.style.width = '80%';
-    tester.style.height = '80vh';
-    tester.style.background = 'blue';
-
-    renderModal.appendChild(container);
-    console.log(renderModal);
-    // console.log(rootElement);
-
-    // renderModal.childNodes.forEach(child => {
-    //   if (child == container) console.log('Match');
-    //   else console.log('No Match');
-    // });
-
-    exit.addEventListener('click', () => {
-      renderModal.removeChild(container);
-
-      rootElement.style.filter = 'blur(0)';
-      rootElement.focus();
-
-      rootElement.style.pointerEvents = 'auto';
-    });
   };
 
   // const showMenuScroll = () => {
@@ -194,14 +272,13 @@ const MenuItemPreview = props => {
   //   scrollableMenu.appendChild(oysterItem);
 
   //   renderModal.appendChild(scrollableMenu);
-  //   console.log(renderModal);
   // };
 
   return (
     <div
       className='d-flex mb-2 item-container'
       onClick={() => {
-        showMenuItemInfo();
+        setMenuItemCanBeRendered(true);
         // showMenuScroll();
       }}
     >

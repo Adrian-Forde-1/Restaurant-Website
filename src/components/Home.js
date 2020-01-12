@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import NutsAndIngredients from '../Resources/Images/Nuts_and_Ingredients.jpg';
-import OystersOnCeramicPlate from '../Resources/Images/oysters_on_ceramic_plate.jpg';
-import GrilledSteakNearSteakKnife from '../Resources/Images/grilled_steak_near_steak_knife.jpg';
-import OysterOnBowl from '../Resources/Images/oyster_on_bowl.jpg';
-import RecipePicture from '../Resources/Images/recipePicture.png';
-import TimerIcon from '../Resources/Images/timerIcon.png';
-import SushiDish from '../Resources/Images/sushi_dish.jpg';
-import FruitsAndVegetables from '../Resources/Images/fruits-and-vegetables.png';
-import BrownOctopusOnPlate from '../Resources/Images/brown_octopus_on_plate.jpg';
+import NutsAndIngredients from '../Resources/Images/Nuts_and_Ingredients.webp';
+import OystersOnCeramicPlate from '../Resources/Images/oysters_on_ceramic_plate.webp';
+import GrilledSteakNearSteakKnife from '../Resources/Images/grilled_steak_near_steak_knife.webp';
+import OysterOnBowl from '../Resources/Images/oyster_on_bowl.webp';
+import RecipePicture from '../Resources/Images/recipePicture.webp';
+import TimerIcon from '../Resources/Images/timerIcon.webp';
+import SushiDish from '../Resources/Images/sushi_dish.webp';
+import FruitsAndVegetables from '../Resources/Images/fruits-and-vegetables.webp';
+import BrownOctopusOnPlate from '../Resources/Images/brown_octopus_on_plate.webp';
 // import Modal from './Modal';
-
-import uuid from 'uuid/v1';
 
 import MenuItemPreview from './MenuItemPreview';
 class Home extends Component {
@@ -130,9 +127,9 @@ class Home extends Component {
                     <p className='mb-4'>
                       Cuisine like you've never tasted before
                     </p>
-                    <Link to='/reservation' className='btn'>
+                    <a href='/reservation' className='btn'>
                       Make Reservation
-                    </Link>
+                    </a>
                   </div>
                 </div>
                 <div className='carousel-item'>
@@ -146,9 +143,9 @@ class Home extends Component {
                       <span className='Logo'>Quality</span> Comes First
                     </h1>
                     <p className='mb-4'>Made With Precision And Care</p>
-                    <Link to='/reservation' className='btn'>
+                    <a href='/reservation' className='btn'>
                       Make Reservation
-                    </Link>
+                    </a>
                   </div>
                 </div>
                 <div className='carousel-item'>
@@ -162,9 +159,9 @@ class Home extends Component {
                       <span className='Logo'>Fresh</span> Ingredients
                     </h1>
                     <p className='mb-4'>Savory And Impactful Flavors</p>
-                    <Link to='/reservation' className='btn'>
+                    <a href='/reservation' className='btn'>
                       Make Reservation
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
