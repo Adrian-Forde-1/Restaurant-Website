@@ -1,31 +1,31 @@
 {
   "files": {
-    "main.css": "/Restaurant-Website/static/css/main.6e1f0169.chunk.css",
-    "main.js": "/Restaurant-Website/static/js/main.3730473e.chunk.js",
-    "main.js.map": "/Restaurant-Website/static/js/main.3730473e.chunk.js.map",
+    "main.css": "/Restaurant-Website/static/css/main.53efb811.chunk.css",
+    "main.js": "/Restaurant-Website/static/js/main.86564267.chunk.js",
+    "main.js.map": "/Restaurant-Website/static/js/main.86564267.chunk.js.map",
     "runtime-main.js": "/Restaurant-Website/static/js/runtime-main.11425872.js",
     "runtime-main.js.map": "/Restaurant-Website/static/js/runtime-main.11425872.js.map",
-    "static/js/2.73eb407c.chunk.js": "/Restaurant-Website/static/js/2.73eb407c.chunk.js",
-    "static/js/2.73eb407c.chunk.js.map": "/Restaurant-Website/static/js/2.73eb407c.chunk.js.map",
+    "static/js/2.b654bb5d.chunk.js": "/Restaurant-Website/static/js/2.b654bb5d.chunk.js",
+    "static/js/2.b654bb5d.chunk.js.map": "/Restaurant-Website/static/js/2.b654bb5d.chunk.js.map",
     "index.html": "/Restaurant-Website/index.html",
-    "precache-manifest.28808d1f42d53670c28092162ddc7d48.js": "/Restaurant-Website/precache-manifest.28808d1f42d53670c28092162ddc7d48.js",
+    "precache-manifest.4160e807e69bf773322887819c4215ce.js": "/Restaurant-Website/precache-manifest.4160e807e69bf773322887819c4215ce.js",
     "service-worker.js": "/Restaurant-Website/service-worker.js",
-    "static/css/main.6e1f0169.chunk.css.map": "/Restaurant-Website/static/css/main.6e1f0169.chunk.css.map",
-    "static/js/2.73eb407c.chunk.js.LICENSE": "/Restaurant-Website/static/js/2.73eb407c.chunk.js.LICENSE",
-    "static/media/style.css": "/Restaurant-Website/static/media/Nuts_and_Ingredients.52ff61e3.jpg",
-    "static/media/brown_octopus_on_plate.jpg": "/Restaurant-Website/static/media/brown_octopus_on_plate.d05af36b.jpg",
-    "static/media/fruits-and-vegetables.png": "/Restaurant-Website/static/media/fruits-and-vegetables.cc02fdc4.png",
-    "static/media/grilled_steak_near_steak_knife.jpg": "/Restaurant-Website/static/media/grilled_steak_near_steak_knife.9181cb00.jpg",
-    "static/media/oyster_on_bowl.jpg": "/Restaurant-Website/static/media/oyster_on_bowl.3b09d3a2.jpg",
-    "static/media/oysters_on_ceramic_plate.jpg": "/Restaurant-Website/static/media/oysters_on_ceramic_plate.b8000b03.jpg",
-    "static/media/recipePicture.png": "/Restaurant-Website/static/media/recipePicture.622744ea.png",
-    "static/media/sushi_dish.jpg": "/Restaurant-Website/static/media/sushi_dish.50575774.jpg",
-    "static/media/timerIcon.png": "/Restaurant-Website/static/media/timerIcon.09cdd3e9.png"
+    "static/css/main.53efb811.chunk.css.map": "/Restaurant-Website/static/css/main.53efb811.chunk.css.map",
+    "static/js/2.b654bb5d.chunk.js.LICENSE": "/Restaurant-Website/static/js/2.b654bb5d.chunk.js.LICENSE",
+    "static/media/style.css": "/Restaurant-Website/static/media/Nuts_and_Ingredients.1e72209a.webp",
+    "static/media/brown_octopus_on_plate.webp": "/Restaurant-Website/static/media/brown_octopus_on_plate.8d606a4a.webp",
+    "static/media/fruits-and-vegetables.webp": "/Restaurant-Website/static/media/fruits-and-vegetables.6a7c42a2.webp",
+    "static/media/grilled_steak_near_steak_knife.webp": "/Restaurant-Website/static/media/grilled_steak_near_steak_knife.2688f280.webp",
+    "static/media/oyster_on_bowl.webp": "/Restaurant-Website/static/media/oyster_on_bowl.0403d44c.webp",
+    "static/media/oysters_on_ceramic_plate.webp": "/Restaurant-Website/static/media/oysters_on_ceramic_plate.04b02754.webp",
+    "static/media/recipePicture.webp": "/Restaurant-Website/static/media/recipePicture.de7cead0.webp",
+    "static/media/sushi_dish.webp": "/Restaurant-Website/static/media/sushi_dish.94df07bb.webp",
+    "static/media/timerIcon.webp": "/Restaurant-Website/static/media/timerIcon.fb92e0a4.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.11425872.js",
-    "static/js/2.73eb407c.chunk.js",
-    "static/css/main.6e1f0169.chunk.css",
-    "static/js/main.3730473e.chunk.js"
+    "static/js/2.b654bb5d.chunk.js",
+    "static/css/main.53efb811.chunk.css",
+    "static/js/main.86564267.chunk.js"
   ]
 }
