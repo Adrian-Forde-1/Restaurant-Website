@@ -27,8 +27,10 @@ $red-color: #f34235;
 
 .navigation {
   z-index: 10000;
+  // position: auto;
   position: fixed;
-  background: rgba(0, 0, 0, 0);
+  // top: 0;
+  background: none;
   color: white;
   width: 100%;
 }
@@ -63,6 +65,19 @@ $red-color: #f34235;
 //   background-size: cover;
 //   height: 100vh;
 // }
+
+.lander-page-main-text {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.lander-page-sub-text {
+  animation: slideFromRightToLeft 1s cubic-bezier(0.5, 0.5, 0.5, 1);
+}
+
+.lander-page-reservation-btn {
+  animation: slideFromBottomToTop 1s;
+  animation-timing-function: cubic-bezier(0, 1, 1, 1);
+}
 
 .welcome-text {
   color: white;
@@ -176,6 +191,10 @@ $red-color: #f34235;
   }
 }
 
+.preview-notification {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .badge {
   font-size: 20px;
   position: absolute;
@@ -189,6 +208,7 @@ $red-color: #f34235;
 
 .lunch-items,
 .dinner-items {
+  cursor: pointer;
   p {
     max-width: 900px;
   }
@@ -784,5 +804,36 @@ footer {
   }
   to {
     transform: scaleX(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRightToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideFromBottomToTop {
+  from {
+    opacity: 0;
+    transform: translateY(75px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }

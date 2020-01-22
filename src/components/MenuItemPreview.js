@@ -276,7 +276,7 @@ const MenuItemPreview = props => {
 
   return (
     <div
-      className='d-flex mb-2 item-container'
+      className='d-flex mb-2'
       onClick={() => {
         setMenuItemCanBeRendered(true);
         // showMenuScroll();

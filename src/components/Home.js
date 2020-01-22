@@ -88,9 +88,25 @@ class Home extends Component {
     };
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      const landerPageMainText = document.querySelector(
+        '.lander-page-main-text'
+      );
+      const landerPageSubText = document.querySelector('.lander-page-sub-text');
+      const landerPageReservationBtn = document.querySelector(
+        '.lander-page-reservation-btn'
+      );
+
+      landerPageMainText.classList.remove('lander-page-main-text');
+      landerPageSubText.classList.remove('lander-page-sub-text');
+      landerPageReservationBtn.classList.remove('lander-page-reservation-btn');
+    }, 2000);
+  }
+
   render() {
     return (
-      <div>
+      <div className='home'>
         <header id='home'>
           <div className='container-fluid p-0'>
             <div
@@ -121,13 +137,16 @@ class Home extends Component {
                     alt='First slide'
                   />
                   <div className='carousel-caption d-md-block welcome-text'>
-                    <h1>
+                    <h1 className='lander-page-main-text'>
                       Welcome to <span className='Logo'>Exquis</span>
                     </h1>
-                    <p className='mb-4'>
+                    <p className='mb-4 lander-page-sub-text'>
                       Cuisine like you've never tasted before
                     </p>
-                    <a href='/reservation' className='btn'>
+                    <a
+                      href='/reservation'
+                      className='btn lander-page-reservation-btn'
+                    >
                       Make Reservation
                     </a>
                   </div>
@@ -233,7 +252,10 @@ class Home extends Component {
                 </h2>
                 <div className=' mb-5'>
                   <h4>Lunch</h4>
-                  <hr className='mb-5' />
+                  <hr className='mb-2' />
+                  <div className='container d-flex justify-content-center align-items-center text-capitalize py-2 border border-danger mb-5 preview-notification'>
+                    Click Menu Items To Preview
+                  </div>
                   <div className='lunch-items'>
                     {this.state.lunchItems.map(item => {
                       return <MenuItemPreview item={item} key={item.itemKey} />;

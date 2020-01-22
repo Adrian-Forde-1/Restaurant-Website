@@ -33,7 +33,7 @@
 .navigation {
   z-index: 10000;
   position: fixed;
-  background: rgba(0, 0, 0, 0);
+  background: none;
   color: white;
   width: 100%;
 }
@@ -61,6 +61,23 @@
 
 .red-color {
   color: #f34235 !important;
+}
+
+.lander-page-main-text {
+  -webkit-animation: fadeIn 1.5s ease-in-out;
+          animation: fadeIn 1.5s ease-in-out;
+}
+
+.lander-page-sub-text {
+  -webkit-animation: slideFromRightToLeft 1s cubic-bezier(0.5, 0.5, 0.5, 1);
+          animation: slideFromRightToLeft 1s cubic-bezier(0.5, 0.5, 0.5, 1);
+}
+
+.lander-page-reservation-btn {
+  -webkit-animation: slideFromBottomToTop 1s;
+          animation: slideFromBottomToTop 1s;
+  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 1);
+          animation-timing-function: cubic-bezier(0, 1, 1, 1);
 }
 
 .welcome-text {
@@ -164,6 +181,10 @@
   color: #f34235;
 }
 
+.preview-notification {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .badge {
   font-size: 20px;
   position: absolute;
@@ -172,6 +193,11 @@
 }
 
 .item-container {
+  cursor: pointer;
+}
+
+.lunch-items,
+.dinner-items {
   cursor: pointer;
 }
 
@@ -738,6 +764,76 @@ footer i {
   to {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideFromRightToLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes slideFromRightToLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes slideFromBottomToTop {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(75px);
+            transform: translateY(75px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes slideFromBottomToTop {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(75px);
+            transform: translateY(75px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 /*# sourceMappingURL=style.css.map */

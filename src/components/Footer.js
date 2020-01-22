@@ -7,7 +7,9 @@ const Footer = () => {
       id='contact'
       className='d-flex flex-column align-items-center contact'
     >
-      <h3 className='text-center pt-3'>Contact</h3>
+      <div className='container d-flex justify-content-center'>
+        <h3 className='text-center pt-3 w-auto'>Contact</h3>
+      </div>
       <div className='container mt-2 mb-4'>
         <div className='d-flex justify-content-around'>
           <i className='fab fa-facebook-f red-color'></i>
