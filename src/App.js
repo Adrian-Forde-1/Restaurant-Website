@@ -9,18 +9,16 @@ import ReservationNavbar from './components/ReservationNavbar';
 function App() {
   return (
     <BrowserRouter>
-      <Switch>
-        <div className='App'>
-          {/* <Navbar /> */}
+      <div className='App'>
+        {/* <Navbar /> */}
 
-          <Route exact path='/' component={Navbar} />
-          <Route exact path='/' component={Home} />
-          <Route exact='/reservation' component={ReservationNavbar} />
-          <Route path='/reservation' component={Reservation} />
+        <Route exact path='/' component={Navbar} />
+        <Route exact path='/' component={Home} />
+        <Route exact path='/reservation' component={ReservationNavbar} />
+        <Route exact path='/reservation' component={Reservation} />
 
-          <Footer />
-        </div>
-      </Switch>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
