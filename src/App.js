@@ -10,14 +10,16 @@ function App() {
   return (
     <BrowserRouter>
       <div className='App'>
-        {/* <Navbar /> */}
+        <Switch>
+          {/* <Navbar /> */}
 
-        <Route exact path='/' component={Navbar} />
-        <Route exact path='/' component={Home} />
-        <Route exact path='/reservation' component={ReservationNavbar} />
-        <Route exact path='/reservation' component={Reservation} />
+          <Route exact path='/' component={Home} />
+          <Route exact path='/' component={Navbar} />
+          <Route exact path='/reservation' component={ReservationNavbar} />
+          <Route exact path='/reservation' component={Reservation} />
 
-        <Footer />
+          <Footer />
+        </Switch>
       </div>
     </BrowserRouter>
   );
