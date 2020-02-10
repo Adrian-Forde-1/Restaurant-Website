@@ -91,20 +91,29 @@ class Home extends Component {
     };
   }
 
-  componentDidMount() {
-    setTimeout(() => {
-      const landerPageMainText = document.querySelector(
-        '.lander-page-main-text'
-      );
-      const landerPageSubText = document.querySelector('.lander-page-sub-text');
-      const landerPageReservationBtn = document.querySelector(
-        '.lander-page-reservation-btn'
-      );
+  componentDidMount() {}
 
-      landerPageMainText.classList.remove('lander-page-main-text');
-      landerPageSubText.classList.remove('lander-page-sub-text');
-      landerPageReservationBtn.classList.remove('lander-page-reservation-btn');
-    }, 2000);
+  componentDidUpdate() {
+    // console.log(this.props.history.location.pathname);
+    // console.log(this.props.history.location.pathname === '/');
+    // if (this.props.history.location.pathname !== '/reservation') {
+    //   setTimeout(() => {
+    //     const landerPageMainText = document.querySelector(
+    //       '.lander-page-main-text'
+    //     );
+    //     const landerPageSubText = document.querySelector(
+    //       '.lander-page-sub-text'
+    //     );
+    //     const landerPageReservationBtn = document.querySelector(
+    //       '.lander-page-reservation-btn'
+    //     );
+    //     landerPageMainText.classList.remove('lander-page-main-text');
+    //     landerPageSubText.classList.remove('lander-page-sub-text');
+    //     landerPageReservationBtn.classList.remove(
+    //       'lander-page-reservation-btn'
+    //     );
+    //   }, 2000);
+    // }
   }
 
   render() {
@@ -249,12 +258,12 @@ class Home extends Component {
                       <p className='mb-4 lander-page-sub-text'>
                         Cuisine like you've never tasted before
                       </p>
-                      <a
-                        href='/reservation'
+                      <Link
+                        to='/reservation'
                         className='btn lander-page-reservation-btn'
                       >
                         Make Reservation
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className='carousel-item'>
@@ -268,9 +277,9 @@ class Home extends Component {
                         <span className='Logo'>Quality</span> Comes First
                       </h1>
                       <p className='mb-4'>Made With Precision And Care</p>
-                      <a href='/reservation' className='btn'>
+                      <Link to='/reservation' className='btn'>
                         Make Reservation
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className='carousel-item'>
@@ -284,9 +293,9 @@ class Home extends Component {
                         <span className='Logo'>Fresh</span> Ingredients
                       </h1>
                       <p className='mb-4'>Savory And Impactful Flavors</p>
-                      <a href='/reservation' className='btn'>
+                      <Link to='/reservation' className='btn'>
                         Make Reservation
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

@@ -11,14 +11,12 @@ function App() {
   return (
     <HashRouter>
       <div className='App'>
-        <Switch>
-          {/* <Navbar /> */}
+        {/* <Navbar /> */}
 
-          <Route exact path='/' component={Home} />
-          {/* <Route exact path='/' component={Navbar} /> */}
-          {/* <Route exact path='/reservation' component={ReservationNavbar} /> */}
-          <Route exact path='/reservation' component={Reservation} />
-        </Switch>
+        <Route exact path='/' component={Home} />
+        {/* <Route exact path='/' component={Navbar} /> */}
+        {/* <Route exact path='/reservation' component={ReservationNavbar} /> */}
+        <Route exact path='/reservation' component={Reservation} />
       </div>
     </HashRouter>
   );
