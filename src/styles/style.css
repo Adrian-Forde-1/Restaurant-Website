@@ -5,25 +5,16 @@
   scroll-behavior: smooth;
 }
 
-.render-modal {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  right: 500px;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background: red;
-  border: 1px solid red;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: inherit;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #f34235;
 }
 
 .Logo {
@@ -31,7 +22,7 @@
 }
 
 .navigation {
-  z-index: 10000;
+  z-index: 1000;
   position: fixed;
   background: none;
   color: white;
@@ -332,6 +323,96 @@ footer i {
   padding: 50px 40px;
 }
 
+.modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 50000;
+  -webkit-transition: visibility 0s, opacity 500ms ease;
+  transition: visibility 0s, opacity 500ms ease;
+}
+
+.active-modal {
+  visibility: visible;
+  opacity: 1;
+}
+
+.animated-modal {
+  position: relative;
+  width: 40%;
+  background-color: none;
+  max-height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-info-section {
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 20px;
+}
+
+.modal-title h3 {
+  color: #f34235;
+}
+
+.modal-item-price {
+  width: auto;
+  display: inline-block;
+  margin-right: auto;
+  padding: 5px 10px;
+  background-color: #f34235;
+  color: #202124;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.modal-img {
+  -o-object-fit: fit !important;
+     object-fit: fit !important;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #f34235;
+  text-shadow: 0 0 0 10px 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .animated-modal {
+    min-width: 90%;
+  }
+}
+
 @media (min-width: 576px) {
   form select,
   form input {
@@ -405,7 +486,10 @@ footer i {
   }
 }
 
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 767.98px) and (min-width: 577px) {
+  .animated-modal {
+    min-width: 70%;
+  }
   .menu-section {
     height: auto;
   }
@@ -562,6 +646,9 @@ footer i {
 }
 
 @media (min-width: 992px) {
+  .animated-modal {
+    max-width: 40%;
+  }
   form select,
   form input {
     width: 500px !important;
