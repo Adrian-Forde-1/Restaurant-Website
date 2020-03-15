@@ -204,24 +204,45 @@ class Home extends Component {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav d-flex justify-content-between pr-5 ml-auto">
               <li className="nav-item px-md-2 px-lg-4">
-                <a href="#home" className="nav-link text-white home-btn">
+                <button
+                  className="nav-link text-white home-btn nav-btn"
+                  onClick={() => {
+                    document.getElementById("home").scrollIntoView();
+                  }}
+                >
                   Home
-                </a>
+                </button>
               </li>
               <li className="nav-item px-md-2 px-lg-4">
-                <a href="#menu" className="nav-link text-white menu-btn">
+                <button
+                  className="nav-link text-white menu-btn nav-btn"
+                  onClick={() => {
+                    document.getElementById("menu").scrollIntoView();
+                  }}
+                >
                   Menu
-                </a>
+                </button>
               </li>
               <li className="nav-item px-md-2 px-lg-4">
-                <a href="#about" className="nav-link text-white about-btn">
+                <button
+                  href="#"
+                  className="nav-link text-white about-btn nav-btn"
+                  onClick={() => {
+                    document.getElementById("about").scrollIntoView();
+                  }}
+                >
                   About
-                </a>
+                </button>
               </li>
               <li className="nav-item px-md-2 px-lg-4">
-                <a href="#contact" className="nav-link text-white contact-btn">
+                <button
+                  className="nav-link text-white contact-btn nav-btn"
+                  onClick={() => {
+                    document.getElementById("contact").scrollIntoView();
+                  }}
+                >
                   Contact
-                </a>
+                </button>
               </li>
             </ul>
           </div>

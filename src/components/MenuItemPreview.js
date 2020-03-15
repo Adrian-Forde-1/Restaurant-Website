@@ -30,7 +30,7 @@ const MenuItemPreview = props => {
       break;
   }
 
-  const menuItemModal = event => {
+  const menuItemModal = () => {
     const modalRoot = document.getElementById("modal-root");
     const element = document.createElement("div");
     element.classList.add("modal-element");

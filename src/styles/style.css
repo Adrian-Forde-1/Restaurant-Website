@@ -29,6 +29,12 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
 }
 
+.nav-btn {
+  background: transparent;
+  border: none;
+  outline-color: #f34235;
+}
+
 .nav-darken {
   background: rgba(0, 0, 0, 0.2) !important;
 }
@@ -411,6 +417,9 @@ footer i {
   .animated-modal {
     min-width: 90%;
   }
+  .daily-item {
+    margin: 5px 0;
+  }
 }
 
 @media (min-width: 576px) {
@@ -478,6 +487,9 @@ footer i {
 }
 
 @media only screen and (min-width: 767.98px) {
+  .daily-item {
+    margin: 0 0;
+  }
   .welcome-text h1 {
     font-size: 1.8rem;
   }

@@ -35,6 +35,12 @@ body {
   width: 100%;
 }
 
+.nav-btn {
+  background: transparent;
+  border: none;
+  outline-color: $red-color;
+}
+
 .nav-darken {
   background: rgba(0, 0, 0, 0.2) !important;
 }
@@ -435,6 +441,10 @@ footer {
   .animated-modal {
     min-width: 90%;
   }
+
+  .daily-item {
+    margin: 5px 0;
+  }
 }
 @media (min-width: 576px) {
   form select,
@@ -507,6 +517,10 @@ footer {
 }
 
 @media only screen and (min-width: 767.98px) {
+  .daily-item {
+    margin: 0 0;
+  }
+
   .welcome-text {
     h1 {
       font-size: 1.8rem;
