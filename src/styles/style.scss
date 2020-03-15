@@ -3,7 +3,7 @@ $red-color: #f34235;
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -66,20 +66,21 @@ $red-color: #f34235;
 //   height: 100vh;
 // }
 
-.lander-page-main-text {
-  animation: fadeIn 1.5s ease-in-out;
-}
+// .lander-page-main-text {
+//   animation: fadeIn 1.5s ease-in-out;
+// }
 
-.lander-page-sub-text {
-  animation: slideFromRightToLeft 1s cubic-bezier(0.5, 0.5, 0.5, 1);
-}
+// .lander-page-sub-text {
+//   animation: slideFromRightToLeft 1s cubic-bezier(0.5, 0.5, 0.5, 1);
+// }
 
-.lander-page-reservation-btn {
-  animation: slideFromBottomToTop 1s;
-  animation-timing-function: cubic-bezier(0, 1, 1, 1);
-}
+// .lander-page-reservation-btn {
+//   animation: slideFromBottomToTop 1s;
+//   animation-timing-function: cubic-bezier(0, 1, 1, 1);
+// }
 
 .welcome-text {
+  width: 100%;
   color: white;
   position: absolute;
   top: 50%;
@@ -159,7 +160,7 @@ $red-color: #f34235;
 
 .menu-section {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url('../Resources/Images/Nuts_and_Ingredients.webp') no-repeat center;
+    url("../Resources/Images/Nuts_and_Ingredients.webp") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   height: auto;
@@ -268,7 +269,7 @@ footer {
   }
 }
 
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
   .badge {
     right: 10px;
     top: 40px;
@@ -297,25 +298,15 @@ footer {
   }
 
   .welcome-text {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -45%);
-    text-align: center;
-    width: 300px;
-
     h1 {
-      text-shadow: 2px 2px 3px black;
-      font-size: 20px;
+      font-size: 2rem;
     }
 
     p {
-      text-transform: capitalize;
-      text-shadow: 2px 2px 3px black;
       font-size: 10px;
     }
   }
+
   .btn {
     width: 150px;
     border-radius: 20px;
@@ -356,7 +347,7 @@ footer {
   align-items: center;
   // height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url('../Resources/Images/Nuts_and_Ingredients.webp') no-repeat center;
+    url("../Resources/Images/Nuts_and_Ingredients.webp") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   margin-bottom: 0px !important;
@@ -390,26 +381,6 @@ footer {
     height: 210vh;
   }
 
-  .welcome-text {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -45%);
-    text-align: center;
-    width: 300px;
-
-    h1 {
-      text-shadow: 2px 2px 3px black;
-      font-size: 20px;
-    }
-
-    p {
-      text-transform: capitalize;
-      text-shadow: 2px 2px 3px black;
-      font-size: 10px;
-    }
-  }
   .btn {
     width: 150px;
     border-radius: 20px;
@@ -460,7 +431,18 @@ footer {
   }
 }
 
-@media (max-width: 767.98px) {
+@media only screen and (min-width: 767.98px) {
+  .welcome-text {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+@media only screen and (max-width: 767.98px) {
   .menu-section {
     height: auto;
   }
@@ -468,27 +450,6 @@ footer {
   .about-img-container {
     width: 100px;
     margin-right: 50px;
-  }
-
-  .welcome-text {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -45%);
-    text-align: center;
-    width: 300px;
-
-    h1 {
-      text-shadow: 2px 2px 3px black;
-      font-size: 30px;
-    }
-
-    p {
-      text-transform: capitalize;
-      text-shadow: 2px 2px 3px black;
-      font-size: 16px;
-    }
   }
 
   .img {
@@ -558,27 +519,6 @@ footer {
     margin-bottom: 30px;
   }
 
-  .welcome-text {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -45%);
-    text-align: center;
-    width: 300px;
-
-    h1 {
-      text-shadow: 2px 2px 3px black;
-      font-size: 30px;
-    }
-
-    p {
-      text-transform: capitalize;
-      text-shadow: 2px 2px 3px black;
-      font-size: 16px;
-    }
-  }
-
   .btn {
     width: 150px;
     border-radius: 20px;
@@ -615,7 +555,18 @@ footer {
   }
 }
 
-@media (max-width: 991.98px) {
+@media only screen and(min-width: 991.98px) {
+  .welcome-text {
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+@media only screen and(max-width: 991.98px) {
   .menu-section {
     height: auto;
   }
@@ -625,26 +576,6 @@ footer {
     margin-right: 100px;
   }
 
-  .welcome-text {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -45%);
-    text-align: center;
-    width: 300px;
-
-    h1 {
-      text-shadow: 2px 2px 3px black;
-      font-size: 30px;
-    }
-
-    p {
-      text-transform: capitalize;
-      text-shadow: 2px 2px 3px black;
-      font-size: 14px;
-    }
-  }
   .btn {
     width: 160px;
     border-radius: 20px;
@@ -710,26 +641,6 @@ footer {
     margin-right: 100px;
   }
 
-  .welcome-text {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -45%);
-    text-align: center;
-    width: 300px;
-
-    h1 {
-      text-shadow: 2px 2px 3px black;
-      font-size: 30px;
-    }
-
-    p {
-      text-transform: capitalize;
-      text-shadow: 2px 2px 3px black;
-      font-size: 14px;
-    }
-  }
   .btn {
     width: 160px;
     border-radius: 20px;
@@ -767,7 +678,7 @@ footer {
 
   .currently {
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 10%;
       bottom: -3px;
@@ -780,10 +691,23 @@ footer {
   }
 }
 
-@media (max-width: 1199.98px) {
+@media only screen and (min-width: 1199.98px) {
+  .welcome-text {
+    h1 {
+      font-size: 2.8rem;
+    }
+  }
+}
+@media only screen and (max-width: 1199.98px) {
   .menu-section {
     height: auto;
   }
+
+  // .welcome-text {
+  //   h1 {
+  //     font-size: 2.8rem;
+  //   }
+  // }
 
   .carousel {
     max-height: 100vh !important;

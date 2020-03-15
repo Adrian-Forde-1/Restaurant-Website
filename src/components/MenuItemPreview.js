@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 //Item Images
-import GrilledSteakNearSteakKnife from '../Resources/Images/grilled_steak_near_steak_knife.webp';
-import OysterOnBowl from '../Resources/Images/oyster_on_bowl.webp';
-import SushiDish from '../Resources/Images/sushi_dish.webp';
-import BrownOctopusOnPlate from '../Resources/Images/brown_octopus_on_plate.webp';
+import GrilledSteakNearSteakKnife from "../Resources/Images/grilled_steak_near_steak_knife.webp";
+import OysterOnBowl from "../Resources/Images/oyster_on_bowl.webp";
+import SushiDish from "../Resources/Images/sushi_dish.webp";
+import BrownOctopusOnPlate from "../Resources/Images/brown_octopus_on_plate.webp";
 
 window.navActive = true;
 
@@ -36,15 +36,15 @@ const MenuItemPreview = props => {
 
   useEffect(() => {
     if (menuItemCanBeRendered) {
-      const renderModal = document.getElementById('render-modal');
-      const container = document.querySelectorAll('.menu-item-container');
+      const renderModal = document.getElementById("render-modal");
+      const container = document.querySelectorAll(".menu-item-container");
       container.forEach(contain => renderModal.removeChild(contain));
       // renderModal.removeChild(container);
       showMenuItemInfo();
     }
   }, [modalWidth, modalXTranslate]);
 
-  window.addEventListener('resize', () => {
+  window.addEventListener("resize", () => {
     // var currentWindowMaxWidth = window.matchMedia('(max-width: 700px)');
     // var currentWindowMinWidth = window.matchMedia('(min-width: 701px)');
     // if (currentWindowMaxWidth.matches) {
@@ -88,7 +88,7 @@ const MenuItemPreview = props => {
   });
 
   const item = props.item;
-  const redColor = '#f34235';
+  const redColor = "#f34235";
   var itemImg = null;
   var menuItemSmallMQ = false;
   var menuItemLargeMQ = false;
@@ -96,16 +96,16 @@ const MenuItemPreview = props => {
   // Colors
 
   switch (item.imgSrc) {
-    case 'SushiDish':
+    case "SushiDish":
       itemImg = SushiDish;
       break;
-    case 'GrilledSteakNearSteakKnife':
+    case "GrilledSteakNearSteakKnife":
       itemImg = GrilledSteakNearSteakKnife;
       break;
-    case 'BrownOctopusOnPlate':
+    case "BrownOctopusOnPlate":
       itemImg = BrownOctopusOnPlate;
       break;
-    case 'OysterOnBowl':
+    case "OysterOnBowl":
       itemImg = OysterOnBowl;
       break;
     default:
@@ -113,105 +113,105 @@ const MenuItemPreview = props => {
   }
 
   const enableBlur = () => {
-    const rootElement = document.getElementById('root');
+    const rootElement = document.getElementById("root");
 
-    rootElement.style.filter = 'blur(15px)';
+    rootElement.style.filter = "blur(15px)";
     rootElement.blur();
     enableFocus();
   };
 
   const enableFocus = () => {
-    const renderModal = document.getElementById('render-modal');
+    const renderModal = document.getElementById("render-modal");
     renderModal.focus();
   };
 
   const showMenuItemInfo = () => {
     if (menuItemCanBeRendered) {
       enableBlur();
-      const renderModal = document.getElementById('render-modal');
-      const rootElement = document.getElementById('root');
-      const container = document.createElement('div');
-      const img = document.createElement('img');
-      const exit = document.createElement('button');
-      const exitNode = document.createElement('i');
-      const modalBody = document.createElement('div');
-      const price = document.createElement('div');
-      const priceTextNode = document.createTextNode('$' + item.price);
-      const imgContainer = document.createElement('div');
+      const renderModal = document.getElementById("render-modal");
+      const rootElement = document.getElementById("root");
+      const container = document.createElement("div");
+      const img = document.createElement("img");
+      const exit = document.createElement("button");
+      const exitNode = document.createElement("i");
+      const modalBody = document.createElement("div");
+      const price = document.createElement("div");
+      const priceTextNode = document.createTextNode("$" + item.price);
+      const imgContainer = document.createElement("div");
 
-      renderModal.style.background = 'none';
-      rootElement.style.pointerEvents = 'none';
+      renderModal.style.background = "none";
+      rootElement.style.pointerEvents = "none";
 
       const renderModalChildNodes = renderModal.childNodes;
       if (renderModalChildNodes.length > 0) {
         renderModalChildNodes.forEach(child => {
-          if (child.classList.contains('modal')) {
+          if (child.classList.contains("modal")) {
             renderModal.removeChild(child);
           }
         });
       }
       img.src = itemImg;
-      img.style.width = '100%';
-      img.style.height = '100%';
-      imgContainer.style.height = '100%';
+      img.style.width = "100%";
+      img.style.height = "100%";
+      imgContainer.style.height = "100%";
       imgContainer.appendChild(img);
 
       exit.style.color = redColor;
-      exit.style.position = 'absolute';
-      exit.style.right = '0';
-      exit.style.marginRight = '30px';
-      exit.style.marginTop = '30px';
-      exit.style.background = 'none';
-      exit.style.border = 'none';
+      exit.style.position = "absolute";
+      exit.style.right = "0";
+      exit.style.marginRight = "30px";
+      exit.style.marginTop = "30px";
+      exit.style.background = "none";
+      exit.style.border = "none";
 
-      exitNode.classList.add('fas');
-      exitNode.classList.add('fa-window-close');
-      exitNode.style.fontSize = '20px';
+      exitNode.classList.add("fas");
+      exitNode.classList.add("fa-window-close");
+      exitNode.style.fontSize = "20px";
 
       exit.appendChild(exitNode);
 
       price.appendChild(priceTextNode);
-      price.style.height = 'auto';
-      price.style.width = '75px';
-      price.style.padding = '2px 5px';
-      price.style.borderRadius = '5px';
+      price.style.height = "auto";
+      price.style.width = "75px";
+      price.style.padding = "2px 5px";
+      price.style.borderRadius = "5px";
       price.style.background = redColor;
-      price.style.color = '#202124';
-      price.style.marginTop = '10px';
-      price.style.fontWeight = 'bold';
+      price.style.color = "#202124";
+      price.style.marginTop = "10px";
+      price.style.fontWeight = "bold";
 
       //Creating the body to hold the name, description and price
-      modalBody.classList.add('modal-body');
-      modalBody.style.backgroundColor = '#202124';
-      modalBody.style.minHeight = '80%';
+      modalBody.classList.add("modal-body");
+      modalBody.style.backgroundColor = "#202124";
+      modalBody.style.minHeight = "80%";
 
       //Create Name Element and adding the text node for the element
-      const name = document.createElement('h6');
+      const name = document.createElement("h6");
       const nameTextNode = document.createTextNode(item.name);
       name.appendChild(nameTextNode);
       name.style.color = redColor;
-      name.style.fontSize = '20px';
+      name.style.fontSize = "20px";
 
-      const textSpacer = document.createTextNode('\n');
+      const textSpacer = document.createTextNode("\n");
 
       //Creating Description Element and adding the text node for the element
-      const description = document.createElement('p');
+      const description = document.createElement("p");
       const descriptionTextNode = document.createTextNode(item.description);
       description.appendChild(descriptionTextNode);
-      description.style.color = 'white';
-      description.style.fontWeight = 'lighter';
-      description.style.marginTop = '10px';
+      description.style.color = "white";
+      description.style.fontWeight = "lighter";
+      description.style.marginTop = "10px";
 
       //Container styling
-      container.style.pointerEvents = 'auto';
+      container.style.pointerEvents = "auto";
       container.style.width = `${modalWidth}%`;
       container.style.minWidth = `${modalWidth}%`;
-      container.style.height = '50vh';
-      container.style.zIndex = '8000';
-      container.style.borderRadius = '20px';
+      container.style.height = "50vh";
+      container.style.zIndex = "8000";
+      container.style.borderRadius = "20px";
       container.style.transform = `translate(${modalXTranslate}%, 10%)`;
-      container.style.position = 'fixed';
-      container.classList.add('menu-item-container');
+      container.style.position = "fixed";
+      container.classList.add("menu-item-container");
 
       //Adding the name, description, price and spacer to body
       modalBody.appendChild(name);
@@ -224,23 +224,23 @@ const MenuItemPreview = props => {
       container.appendChild(imgContainer);
       container.appendChild(modalBody);
 
-      const tester = document.createElement('div');
-      tester.style.width = '80%';
-      tester.style.height = '80vh';
-      tester.style.background = 'blue';
+      const tester = document.createElement("div");
+      tester.style.width = "80%";
+      tester.style.height = "80vh";
+      tester.style.background = "blue";
 
       renderModal.appendChild(container);
 
-      exit.addEventListener('click', () => {
+      exit.addEventListener("click", () => {
         setMenuItemCanBeRendered(false);
         renderModal.removeChild(container);
         // const navigationBar = document.querySelector('.navigation');
         // navigationBar.style.position = 'fixed';
 
-        rootElement.style.filter = 'blur(0)';
+        rootElement.style.filter = "blur(0)";
         rootElement.focus();
 
-        rootElement.style.pointerEvents = 'auto';
+        rootElement.style.pointerEvents = "auto";
       });
     }
   };
@@ -276,14 +276,18 @@ const MenuItemPreview = props => {
 
   return (
     <div
-      className='d-flex mb-2'
+      className="d-flex mb-2"
+      data-aos="fade-right"
+      data-aos-offset="250"
+      data-aos-duration="1000"
+      data-aos-delay="100"
       onClick={() => {
         setMenuItemCanBeRendered(true);
         // showMenuScroll();
       }}
     >
-      <div className='mr-4 img-container'>
-        <img src={itemImg} alt='' className='img-fluid' />
+      <div className="mr-4 img-container">
+        <img src={itemImg} alt="" className="img-fluid" />
       </div>
       <div>
         <h6>{item.name}</h6>

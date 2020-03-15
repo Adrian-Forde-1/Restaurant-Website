@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -63,24 +63,8 @@
   color: #f34235 !important;
 }
 
-.lander-page-main-text {
-  -webkit-animation: fadeIn 1.5s ease-in-out;
-          animation: fadeIn 1.5s ease-in-out;
-}
-
-.lander-page-sub-text {
-  -webkit-animation: slideFromRightToLeft 1s cubic-bezier(0.5, 0.5, 0.5, 1);
-          animation: slideFromRightToLeft 1s cubic-bezier(0.5, 0.5, 0.5, 1);
-}
-
-.lander-page-reservation-btn {
-  -webkit-animation: slideFromBottomToTop 1s;
-          animation: slideFromBottomToTop 1s;
-  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 1);
-          animation-timing-function: cubic-bezier(0, 1, 1, 1);
-}
-
 .welcome-text {
+  width: 100%;
   color: white;
   position: absolute;
   top: 50%;
@@ -259,7 +243,7 @@ footer i {
   font-size: 12px;
 }
 
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
   .badge {
     right: 10px;
     top: 40px;
@@ -282,23 +266,10 @@ footer i {
   .dinner-items p {
     font-size: 10px;
   }
-  .welcome-text {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -45%);
-            transform: translate(-50%, -45%);
-    text-align: center;
-    width: 300px;
-  }
   .welcome-text h1 {
-    text-shadow: 2px 2px 3px black;
-    font-size: 20px;
+    font-size: 2rem;
   }
   .welcome-text p {
-    text-transform: capitalize;
-    text-shadow: 2px 2px 3px black;
     font-size: 10px;
   }
   .btn {
@@ -377,25 +348,6 @@ footer i {
   .menu-section {
     height: 210vh;
   }
-  .welcome-text {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -45%);
-            transform: translate(-50%, -45%);
-    text-align: center;
-    width: 300px;
-  }
-  .welcome-text h1 {
-    text-shadow: 2px 2px 3px black;
-    font-size: 20px;
-  }
-  .welcome-text p {
-    text-transform: capitalize;
-    text-shadow: 2px 2px 3px black;
-    font-size: 10px;
-  }
   .btn {
     width: 150px;
     border-radius: 20px;
@@ -444,32 +396,22 @@ footer i {
   }
 }
 
-@media (max-width: 767.98px) {
+@media only screen and (min-width: 767.98px) {
+  .welcome-text h1 {
+    font-size: 1.8rem;
+  }
+  .welcome-text p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
   .menu-section {
     height: auto;
   }
   .about-img-container {
     width: 100px;
     margin-right: 50px;
-  }
-  .welcome-text {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -45%);
-            transform: translate(-50%, -45%);
-    text-align: center;
-    width: 300px;
-  }
-  .welcome-text h1 {
-    text-shadow: 2px 2px 3px black;
-    font-size: 30px;
-  }
-  .welcome-text p {
-    text-transform: capitalize;
-    text-shadow: 2px 2px 3px black;
-    font-size: 16px;
   }
   .img {
     margin-bottom: 30px;
@@ -537,25 +479,6 @@ footer i {
   .img {
     margin-bottom: 30px;
   }
-  .welcome-text {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -45%);
-            transform: translate(-50%, -45%);
-    text-align: center;
-    width: 300px;
-  }
-  .welcome-text h1 {
-    text-shadow: 2px 2px 3px black;
-    font-size: 30px;
-  }
-  .welcome-text p {
-    text-transform: capitalize;
-    text-shadow: 2px 2px 3px black;
-    font-size: 16px;
-  }
   .btn {
     width: 150px;
     border-radius: 20px;
@@ -589,32 +512,22 @@ footer i {
   }
 }
 
-@media (max-width: 991.98px) {
+@media only screen and (min-width: 991.98px) {
+  .welcome-text h1 {
+    font-size: 2.2rem;
+  }
+  .welcome-text p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
   .menu-section {
     height: auto;
   }
   .about-img-container {
     width: 100px;
     margin-right: 100px;
-  }
-  .welcome-text {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -45%);
-            transform: translate(-50%, -45%);
-    text-align: center;
-    width: 300px;
-  }
-  .welcome-text h1 {
-    text-shadow: 2px 2px 3px black;
-    font-size: 30px;
-  }
-  .welcome-text p {
-    text-transform: capitalize;
-    text-shadow: 2px 2px 3px black;
-    font-size: 14px;
   }
   .btn {
     width: 160px;
@@ -661,25 +574,6 @@ footer i {
     width: 100px;
     margin-right: 100px;
   }
-  .welcome-text {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -45%);
-            transform: translate(-50%, -45%);
-    text-align: center;
-    width: 300px;
-  }
-  .welcome-text h1 {
-    text-shadow: 2px 2px 3px black;
-    font-size: 30px;
-  }
-  .welcome-text p {
-    text-transform: capitalize;
-    text-shadow: 2px 2px 3px black;
-    font-size: 14px;
-  }
   .btn {
     width: 160px;
     border-radius: 20px;
@@ -712,7 +606,7 @@ footer i {
     font-size: 14px;
   }
   .currently::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 10%;
     bottom: -3px;
@@ -726,7 +620,13 @@ footer i {
   }
 }
 
-@media (max-width: 1199.98px) {
+@media only screen and (min-width: 1199.98px) {
+  .welcome-text h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: 1199.98px) {
   .menu-section {
     height: auto;
   }
