@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import NutsAndIngredients from "../Resources/Images/Nuts_and_Ingredients.webp";
-import OystersOnCeramicPlate from "../Resources/Images/oysters_on_ceramic_plate.webp";
-import GrilledSteakNearSteakKnife from "../Resources/Images/grilled_steak_near_steak_knife.webp";
-import OysterOnBowl from "../Resources/Images/oyster_on_bowl.webp";
-import RecipePicture from "../Resources/Images/recipePicture.webp";
-import TimerIcon from "../Resources/Images/timerIcon.webp";
-import SushiDish from "../Resources/Images/sushi_dish.webp";
-import FruitsAndVegetables from "../Resources/Images/fruits-and-vegetables.webp";
-import BrownOctopusOnPlate from "../Resources/Images/brown_octopus_on_plate.webp";
-import { Link } from "react-router-dom";
-import MenuItemPreview from "./MenuItemPreview";
+import React, { Component } from 'react';
+import NutsAndIngredients from '../Resources/Images/Nuts_and_Ingredients.webp';
+import OystersOnCeramicPlate from '../Resources/Images/oysters_on_ceramic_plate.webp';
+import GrilledSteakNearSteakKnife from '../Resources/Images/grilled_steak_near_steak_knife.webp';
+import OysterOnBowl from '../Resources/Images/oyster_on_bowl.webp';
+import RecipePicture from '../Resources/Images/recipePicture.webp';
+import TimerIcon from '../Resources/Images/timerIcon.webp';
+import SushiDish from '../Resources/Images/sushi_dish.webp';
+import FruitsAndVegetables from '../Resources/Images/fruits-and-vegetables.webp';
+import BrownOctopusOnPlate from '../Resources/Images/brown_octopus_on_plate.webp';
+import { Link } from 'react-router-dom';
+import MenuItemPreview from './MenuItemPreview';
 // import Modal from './Modal';
 
 // IMPORT ANIMATE ON SCROLL LIBRARY
-import AOS from "aos";
+import AOS from 'aos';
 
 AOS.init();
 
@@ -26,122 +26,97 @@ class Home extends Component {
     this.state = {
       lunchItems: [
         {
-          name: "Sushi",
+          name: 'Sushi',
           description:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.",
-          price: "70",
-          imgSrc: "SushiDish",
-          itemKey: "SushiLunch"
+            'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.',
+          price: '70',
+          imgSrc: 'SushiDish',
+          itemKey: 'SushiLunch'
         },
         {
-          name: "Steak",
+          name: 'Steak',
           description:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.",
-          price: "90",
-          imgSrc: "GrilledSteakNearSteakKnife",
-          itemKey: "SteakLunch"
+            'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.',
+          price: '90',
+          imgSrc: 'GrilledSteakNearSteakKnife',
+          itemKey: 'SteakLunch'
         },
         {
-          name: "Octopus",
+          name: 'Octopus',
           description:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.",
-          price: "50",
-          imgSrc: "BrownOctopusOnPlate",
-          itemKey: "BrownOctopusLunch"
+            'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.',
+          price: '50',
+          imgSrc: 'BrownOctopusOnPlate',
+          itemKey: 'BrownOctopusLunch'
         },
         {
-          name: "Oysters",
+          name: 'Oysters',
           description:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.",
-          price: "65",
-          imgSrc: "OysterOnBowl",
-          itemKey: "OysterLunch"
+            'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.',
+          price: '65',
+          imgSrc: 'OysterOnBowl',
+          itemKey: 'OysterLunch'
         }
       ],
 
       dinnerItems: [
         {
-          name: "Sushi",
+          name: 'Sushi',
           description:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.",
-          price: "70",
-          imgSrc: "SushiDish",
-          itemKey: "SushiDinner"
+            'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.',
+          price: '70',
+          imgSrc: 'SushiDish',
+          itemKey: 'SushiDinner'
         },
         {
-          name: "Steak",
+          name: 'Steak',
           description:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.",
-          price: "90",
-          imgSrc: "GrilledSteakNearSteakKnife",
-          itemKey: "SteakDinner"
+            'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.',
+          price: '90',
+          imgSrc: 'GrilledSteakNearSteakKnife',
+          itemKey: 'SteakDinner'
         },
         {
-          name: "Octopus",
+          name: 'Octopus',
           description:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.",
-          price: "50",
-          imgSrc: "BrownOctopusOnPlate",
-          itemKey: "BrownOctopusDinner"
+            'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.',
+          price: '50',
+          imgSrc: 'BrownOctopusOnPlate',
+          itemKey: 'BrownOctopusDinner'
         },
         {
-          name: "Oysters",
+          name: 'Oysters',
           description:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.",
-          price: "65",
-          imgSrc: "OysterOnBowl",
-          itemKey: "OysterDinner"
+            'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.',
+          price: '65',
+          imgSrc: 'OysterOnBowl',
+          itemKey: 'OysterDinner'
         }
       ]
     };
-  }
-
-  componentDidMount() {}
-
-  componentDidUpdate() {
-    // console.log(this.props.history.location.pathname);
-    // console.log(this.props.history.location.pathname === '/');
-    // if (this.props.history.location.pathname !== '/reservation') {
-    //   setTimeout(() => {
-    //     const landerPageMainText = document.querySelector(
-    //       '.lander-page-main-text'
-    //     );
-    //     const landerPageSubText = document.querySelector(
-    //       '.lander-page-sub-text'
-    //     );
-    //     const landerPageReservationBtn = document.querySelector(
-    //       '.lander-page-reservation-btn'
-    //     );
-    //     landerPageMainText.classList.remove('lander-page-main-text');
-    //     landerPageSubText.classList.remove('lander-page-sub-text');
-    //     landerPageReservationBtn.classList.remove(
-    //       'lander-page-reservation-btn'
-    //     );
-    //   }, 2000);
-    // }
   }
 
   render() {
     var navAnimsActive = window.navActive;
 
     function navBarDarken() {
-      var menuSection = document.querySelector("#menu");
-      var navBar = document.querySelector(".navigation");
+      var menuSection = document.querySelector('#menu');
+      var navBar = document.querySelector('.navigation');
       var menuSectionPos = menuSection.getBoundingClientRect().top;
       // var screenPostion = window.innerHeight;
 
       if (menuSectionPos <= 50) {
-        navBar.classList.add("nav-darken");
+        navBar.classList.add('nav-darken');
       } else if (menuSectionPos > 50) {
-        navBar.classList.remove("nav-darken");
+        navBar.classList.remove('nav-darken');
       }
     }
 
     function whichSection() {
-      var homeSection = document.querySelector("#home");
-      var menuSection = document.querySelector("#menu");
-      var aboutSection = document.querySelector("#about");
-      var contactSection = document.querySelector("#contact");
+      var homeSection = document.querySelector('#home');
+      var menuSection = document.querySelector('#menu');
+      var aboutSection = document.querySelector('#about');
+      var contactSection = document.querySelector('#contact');
       var homeSectionPosBot = homeSection.getBoundingClientRect().bottom;
       var menuSectionPosTop = menuSection.getBoundingClientRect().top;
       var menuSectionPosBot = menuSection.getBoundingClientRect().bottom;
@@ -151,32 +126,32 @@ class Home extends Component {
       // var contactSectionPosBot = contactSection.getBoundingClientRect().bottom;
 
       if (homeSectionPosBot > 0) {
-        document.querySelector(".home-btn").classList.add("currently");
+        document.querySelector('.home-btn').classList.add('currently');
       } else {
-        document.querySelector(".home-btn").classList.remove("currently");
+        document.querySelector('.home-btn').classList.remove('currently');
       }
 
       if (menuSectionPosTop < 1 && menuSectionPosBot > 1) {
-        document.querySelector(".menu-btn").classList.add("currently");
+        document.querySelector('.menu-btn').classList.add('currently');
       } else {
-        document.querySelector(".menu-btn").classList.remove("currently");
+        document.querySelector('.menu-btn').classList.remove('currently');
       }
 
       if (aboutSectionPosTop < 1 && aboutSectionPosBot > 1) {
-        document.querySelector(".about-btn").classList.add("currently");
+        document.querySelector('.about-btn').classList.add('currently');
       } else {
-        document.querySelector(".about-btn").classList.remove("currently");
+        document.querySelector('.about-btn').classList.remove('currently');
       }
 
       if (contactSectionPosTop + 100 <= window.innerHeight) {
-        document.querySelector(".contact-btn").classList.add("currently");
-        document.querySelector(".about-btn").classList.remove("currently");
+        document.querySelector('.contact-btn').classList.add('currently');
+        document.querySelector('.about-btn').classList.remove('currently');
       } else {
-        document.querySelector(".contact-btn").classList.remove("currently");
+        document.querySelector('.contact-btn').classList.remove('currently');
       }
     }
 
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       if (navAnimsActive === true) {
         navBarDarken();
         whichSection();
@@ -207,7 +182,7 @@ class Home extends Component {
                 <button
                   className="nav-link text-white home-btn nav-btn"
                   onClick={() => {
-                    document.getElementById("home").scrollIntoView();
+                    document.getElementById('home').scrollIntoView();
                   }}
                 >
                   Home
@@ -217,7 +192,7 @@ class Home extends Component {
                 <button
                   className="nav-link text-white menu-btn nav-btn"
                   onClick={() => {
-                    document.getElementById("menu").scrollIntoView();
+                    document.getElementById('menu').scrollIntoView();
                   }}
                 >
                   Menu
@@ -228,7 +203,7 @@ class Home extends Component {
                   href="#"
                   className="nav-link text-white about-btn nav-btn"
                   onClick={() => {
-                    document.getElementById("about").scrollIntoView();
+                    document.getElementById('about').scrollIntoView();
                   }}
                 >
                   About
@@ -238,7 +213,7 @@ class Home extends Component {
                 <button
                   className="nav-link text-white contact-btn nav-btn"
                   onClick={() => {
-                    document.getElementById("contact").scrollIntoView();
+                    document.getElementById('contact').scrollIntoView();
                   }}
                 >
                   Contact
