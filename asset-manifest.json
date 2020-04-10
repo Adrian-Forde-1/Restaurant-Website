@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Restaurant-Website/static/css/main.3e543dfb.chunk.css",
-    "main.js": "/Restaurant-Website/static/js/main.7c93852c.chunk.js",
-    "main.js.map": "/Restaurant-Website/static/js/main.7c93852c.chunk.js.map",
+    "main.css": "/Restaurant-Website/static/css/main.f4595c52.chunk.css",
+    "main.js": "/Restaurant-Website/static/js/main.2468858b.chunk.js",
+    "main.js.map": "/Restaurant-Website/static/js/main.2468858b.chunk.js.map",
     "runtime-main.js": "/Restaurant-Website/static/js/runtime-main.11425872.js",
     "runtime-main.js.map": "/Restaurant-Website/static/js/runtime-main.11425872.js.map",
-    "static/js/2.99adb2c0.chunk.js": "/Restaurant-Website/static/js/2.99adb2c0.chunk.js",
-    "static/js/2.99adb2c0.chunk.js.map": "/Restaurant-Website/static/js/2.99adb2c0.chunk.js.map",
+    "static/js/2.72f14e67.chunk.js": "/Restaurant-Website/static/js/2.72f14e67.chunk.js",
+    "static/js/2.72f14e67.chunk.js.map": "/Restaurant-Website/static/js/2.72f14e67.chunk.js.map",
     "index.html": "/Restaurant-Website/index.html",
-    "precache-manifest.60be041efa46565ea04c975a195b0ffb.js": "/Restaurant-Website/precache-manifest.60be041efa46565ea04c975a195b0ffb.js",
+    "precache-manifest.194a0b33e92ba22fae78f07dc8005a0a.js": "/Restaurant-Website/precache-manifest.194a0b33e92ba22fae78f07dc8005a0a.js",
     "service-worker.js": "/Restaurant-Website/service-worker.js",
-    "static/css/main.3e543dfb.chunk.css.map": "/Restaurant-Website/static/css/main.3e543dfb.chunk.css.map",
-    "static/js/2.99adb2c0.chunk.js.LICENSE": "/Restaurant-Website/static/js/2.99adb2c0.chunk.js.LICENSE",
+    "static/css/main.f4595c52.chunk.css.map": "/Restaurant-Website/static/css/main.f4595c52.chunk.css.map",
+    "static/js/2.72f14e67.chunk.js.LICENSE": "/Restaurant-Website/static/js/2.72f14e67.chunk.js.LICENSE",
     "static/media/style.css": "/Restaurant-Website/static/media/Nuts_and_Ingredients.1e72209a.webp",
     "static/media/brown_octopus_on_plate.webp": "/Restaurant-Website/static/media/brown_octopus_on_plate.8d606a4a.webp",
     "static/media/fruits-and-vegetables.webp": "/Restaurant-Website/static/media/fruits-and-vegetables.6a7c42a2.webp",
@@ -24,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.11425872.js",
-    "static/js/2.99adb2c0.chunk.js",
-    "static/css/main.3e543dfb.chunk.css",
-    "static/js/main.7c93852c.chunk.js"
+    "static/js/2.72f14e67.chunk.js",
+    "static/css/main.f4595c52.chunk.css",
+    "static/js/main.2468858b.chunk.js"
   ]
 }
