@@ -31,7 +31,7 @@ class Home extends Component {
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.',
           price: '70',
           imgSrc: 'SushiDish',
-          itemKey: 'SushiLunch'
+          itemKey: 'SushiLunch',
         },
         {
           name: 'Steak',
@@ -39,7 +39,7 @@ class Home extends Component {
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.',
           price: '90',
           imgSrc: 'GrilledSteakNearSteakKnife',
-          itemKey: 'SteakLunch'
+          itemKey: 'SteakLunch',
         },
         {
           name: 'Octopus',
@@ -47,7 +47,7 @@ class Home extends Component {
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.',
           price: '50',
           imgSrc: 'BrownOctopusOnPlate',
-          itemKey: 'BrownOctopusLunch'
+          itemKey: 'BrownOctopusLunch',
         },
         {
           name: 'Oysters',
@@ -55,8 +55,8 @@ class Home extends Component {
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.',
           price: '65',
           imgSrc: 'OysterOnBowl',
-          itemKey: 'OysterLunch'
-        }
+          itemKey: 'OysterLunch',
+        },
       ],
 
       dinnerItems: [
@@ -66,7 +66,7 @@ class Home extends Component {
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.',
           price: '70',
           imgSrc: 'SushiDish',
-          itemKey: 'SushiDinner'
+          itemKey: 'SushiDinner',
         },
         {
           name: 'Steak',
@@ -74,7 +74,7 @@ class Home extends Component {
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.',
           price: '90',
           imgSrc: 'GrilledSteakNearSteakKnife',
-          itemKey: 'SteakDinner'
+          itemKey: 'SteakDinner',
         },
         {
           name: 'Octopus',
@@ -82,7 +82,7 @@ class Home extends Component {
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.',
           price: '50',
           imgSrc: 'BrownOctopusOnPlate',
-          itemKey: 'BrownOctopusDinner'
+          itemKey: 'BrownOctopusDinner',
         },
         {
           name: 'Oysters',
@@ -90,138 +90,15 @@ class Home extends Component {
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Reprehenderit illo, numquam dolorem quisquam impeditassumenda dolorum deleniti earum qui at.',
           price: '65',
           imgSrc: 'OysterOnBowl',
-          itemKey: 'OysterDinner'
-        }
-      ]
+          itemKey: 'OysterDinner',
+        },
+      ],
     };
   }
 
   render() {
-    var navAnimsActive = window.navActive;
-
-    function navBarDarken() {
-      var menuSection = document.querySelector('#menu');
-      var navBar = document.querySelector('.navigation');
-      var menuSectionPos = menuSection.getBoundingClientRect().top;
-      // var screenPostion = window.innerHeight;
-
-      if (menuSectionPos <= 50) {
-        navBar.classList.add('nav-darken');
-      } else if (menuSectionPos > 50) {
-        navBar.classList.remove('nav-darken');
-      }
-    }
-
-    function whichSection() {
-      var homeSection = document.querySelector('#home');
-      var menuSection = document.querySelector('#menu');
-      var aboutSection = document.querySelector('#about');
-      var contactSection = document.querySelector('#contact');
-      var homeSectionPosBot = homeSection.getBoundingClientRect().bottom;
-      var menuSectionPosTop = menuSection.getBoundingClientRect().top;
-      var menuSectionPosBot = menuSection.getBoundingClientRect().bottom;
-      var aboutSectionPosTop = aboutSection.getBoundingClientRect().top;
-      var aboutSectionPosBot = aboutSection.getBoundingClientRect().bottom;
-      var contactSectionPosTop = contactSection.getBoundingClientRect().top;
-      // var contactSectionPosBot = contactSection.getBoundingClientRect().bottom;
-
-      if (homeSectionPosBot > 0) {
-        document.querySelector('.home-btn').classList.add('currently');
-      } else {
-        document.querySelector('.home-btn').classList.remove('currently');
-      }
-
-      if (menuSectionPosTop < 1 && menuSectionPosBot > 1) {
-        document.querySelector('.menu-btn').classList.add('currently');
-      } else {
-        document.querySelector('.menu-btn').classList.remove('currently');
-      }
-
-      if (aboutSectionPosTop < 1 && aboutSectionPosBot > 1) {
-        document.querySelector('.about-btn').classList.add('currently');
-      } else {
-        document.querySelector('.about-btn').classList.remove('currently');
-      }
-
-      if (contactSectionPosTop + 100 <= window.innerHeight) {
-        document.querySelector('.contact-btn').classList.add('currently');
-        document.querySelector('.about-btn').classList.remove('currently');
-      } else {
-        document.querySelector('.contact-btn').classList.remove('currently');
-      }
-    }
-
-    window.addEventListener('scroll', () => {
-      if (navAnimsActive === true) {
-        navBarDarken();
-        whichSection();
-      }
-    });
     return (
       <div>
-        <nav className="navbar navbar-expand-md d-inline-flex justify-content-center navigation w-100">
-          <Link
-            to="/"
-            className="navbar-brand text-white text-center pl-md-5 pl-sm-0 Logo"
-          >
-            Exquis
-          </Link>
-
-          <button
-            className="navbar-toggler ml-auto"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            alt="Navigation Button"
-          >
-            <i className="fas fa-hamburger red-color"></i>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav d-flex justify-content-between pr-5 ml-auto">
-              <li className="nav-item px-md-2 px-lg-4">
-                <button
-                  className="nav-link text-white home-btn nav-btn"
-                  onClick={() => {
-                    document.getElementById('home').scrollIntoView();
-                  }}
-                >
-                  Home
-                </button>
-              </li>
-              <li className="nav-item px-md-2 px-lg-4">
-                <button
-                  className="nav-link text-white menu-btn nav-btn"
-                  onClick={() => {
-                    document.getElementById('menu').scrollIntoView();
-                  }}
-                >
-                  Menu
-                </button>
-              </li>
-              <li className="nav-item px-md-2 px-lg-4">
-                <button
-                  href="#"
-                  className="nav-link text-white about-btn nav-btn"
-                  onClick={() => {
-                    document.getElementById('about').scrollIntoView();
-                  }}
-                >
-                  About
-                </button>
-              </li>
-              <li className="nav-item px-md-2 px-lg-4">
-                <button
-                  className="nav-link text-white contact-btn nav-btn"
-                  onClick={() => {
-                    document.getElementById('contact').scrollIntoView();
-                  }}
-                >
-                  Contact
-                </button>
-              </li>
-            </ul>
-          </div>
-        </nav>
         <div className="home">
           <header id="home">
             <div className="container-fluid p-0">
@@ -399,11 +276,11 @@ class Home extends Component {
                   <div className=" mb-5">
                     <h4>Lunch</h4>
                     <hr className="mb-2" />
-                    <div className="container d-flex justify-content-center align-items-center text-capitalize py-2 border border-danger mb-5 preview-notification">
+                    {/* <div className="container d-flex justify-content-center align-items-center text-capitalize py-2 border border-danger mb-5 preview-notification">
                       Click Menu Items To Preview
-                    </div>
+                    </div> */}
                     <div className="lunch-items">
-                      {this.state.lunchItems.map(item => {
+                      {this.state.lunchItems.map((item) => {
                         return (
                           <MenuItemPreview item={item} key={item.itemKey} />
                         );
@@ -414,7 +291,7 @@ class Home extends Component {
                     <h4>Dinner</h4>
                     <hr className="mb-5" />
                     <div className="dinner-items">
-                      {this.state.dinnerItems.map(item => {
+                      {this.state.dinnerItems.map((item) => {
                         return (
                           <MenuItemPreview item={item} key={item.itemKey} />
                         );
@@ -486,48 +363,48 @@ class Home extends Component {
             <h3 className="text-center pt-3 w-auto">Contact</h3>
           </div>
           <div className="container mt-2 mb-4">
-            <div className="d-flex justify-content-around">
+            <div className="social-media-icons-container">
               <i className="fab fa-facebook-f red-color"></i>
               <i className="fab fa-twitter red-color"></i>
               <i className="fab fa-instagram red-color"></i>
             </div>
           </div>
           <div className="d-flex flex-column justify-content-start artist">
-            <div>
-              Recipe Icon made by
+            <div className="icon-link">
+              Recipe Icon made by{' '}
               <a
                 href="https://www.flaticon.com/authors/freepik"
                 title="Freepik"
               >
-                Freepik
+                Freepik{' '}
               </a>
-              from
+              from{' '}
               <a href="https://www.flaticon.com/" title="Flaticon">
                 www.flaticon.com
               </a>
             </div>
-            <div>
-              Timer Icon made by
+            <div className="icon-link">
+              Timer Icon made by{' '}
               <a
                 href="https://www.flaticon.com/authors/freepik"
                 title="Freepik"
               >
-                Freepik
+                Freepik{' '}
               </a>
-              from
+              from{' '}
               <a href="https://www.flaticon.com/" title="Flaticon">
                 www.flaticon.com
               </a>
             </div>
-            <div>
-              Fruits and Vegitable Icon made by
+            <div className="icon-link">
+              Fruits and Vegitable Icon made by{' '}
               <a
                 href="https://www.flaticon.com/authors/nhor-phai"
                 title="Nhor Phai"
               >
-                Nhor Phai
+                Nhor Phai{' '}
               </a>
-              from
+              from{' '}
               <a href="https://www.flaticon.com/" title="Flaticon">
                 www.flaticon.com
               </a>

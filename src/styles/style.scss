@@ -40,6 +40,10 @@ body {
   background: transparent;
   border: none;
   outline-color: $red-color;
+
+  &:hover {
+    color: $red-color !important;
+  }
 }
 
 .nav-darken {
@@ -224,17 +228,19 @@ body {
   cursor: pointer;
 }
 
-.lunch-items,
-.dinner-items {
-  cursor: pointer;
-  p {
-    max-width: 900px;
-  }
-
-  .img-container img {
+.img-container {
+  img {
     width: 200px;
+    height: 100%;
     min-width: 200px;
     max-width: 200px;
+  }
+}
+
+.lunch-items,
+.dinner-items {
+  p {
+    max-width: 900px;
   }
 }
 
@@ -259,15 +265,20 @@ body {
 //Contact Section
 footer {
   color: white;
+  position: relative;
   background-color: #202124;
-  height: auto;
+  min-height: 300px;
+  max-height: auto;
   display: flex;
   justify-content: center;
+  padding: 0 10px;
 
   h3 {
+    width: 20%;
     height: 60px;
     display: block;
-    width: 20%;
+    position: absolute;
+    top: 10px;
     border-bottom: 1px solid $red-color;
   }
 
@@ -299,12 +310,6 @@ footer {
 
   .lunch-items,
   .dinner-items {
-    .img-container img {
-      width: 200px;
-      min-width: 200px;
-      max-width: 200px;
-    }
-
     h6 {
       font-size: 15px;
     }
@@ -400,6 +405,42 @@ footer {
   opacity: 1;
 }
 
+.menu-item-content {
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  p {
+    color: black;
+  }
+}
+
+.menu-item-preview {
+  display: flex;
+  flex-direction: row;
+}
+
+.more-info-btn {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  background-color: $red-color;
+}
+
+// .card {
+//   width: 300px;
+//   height: auto;
+// }
+
+// .card-text {
+//   white-space: nowrap;
+//   text-overflow: ellipsis;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   color: black !important;
+// }
+
 .animated-modal {
   position: relative;
   width: 40%;
@@ -448,6 +489,30 @@ footer {
   cursor: pointer;
 }
 
+.social-media-icons-container {
+  width: 60%;
+  display: flex;
+  margin: 20px auto 50px auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon-link {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 576px) {
+  .social-media-icons-container {
+    i {
+      font-size: 14px;
+    }
+  }
+}
+
+.icon-link {
+  font-size: 12px;
+}
+
 @media (max-width: 576px) {
   .animated-modal {
     min-width: 90%;
@@ -468,6 +533,7 @@ footer {
     }
   }
 }
+
 @media (min-width: 576px) {
   form select,
   form input {
@@ -508,12 +574,6 @@ footer {
 
   .lunch-items,
   .dinner-items {
-    .img-container img {
-      width: 200px;
-      min-width: 200px;
-      max-width: 200px;
-    }
-
     h6 {
       font-size: 15px;
     }
@@ -534,6 +594,26 @@ footer {
       margin: auto;
       object-fit: cover;
       filter: brightness(40%);
+    }
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .img-container {
+    width: 100%;
+
+    img {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
+  .menu-item-preview {
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0px;
     }
   }
 }
@@ -654,12 +734,6 @@ footer {
 
   .lunch-items,
   .dinner-items {
-    .img-container img {
-      width: 200px;
-      min-width: 200px;
-      max-width: 200px;
-    }
-
     h6 {
       font-size: 18px;
     }
@@ -774,12 +848,6 @@ footer {
 
   .lunch-items,
   .dinner-items {
-    .img-container img {
-      width: 200px;
-      min-width: 200px;
-      max-width: 200px;
-    }
-
     h6 {
       font-size: 20px;
     }

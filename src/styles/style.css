@@ -36,6 +36,10 @@ body::-webkit-scrollbar-thumb {
   outline-color: #f34235;
 }
 
+.nav-btn:hover {
+  color: #f34235 !important;
+}
+
 .nav-darken {
   background: rgba(0, 0, 0, 0.2) !important;
 }
@@ -187,21 +191,16 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 
-.lunch-items,
-.dinner-items {
-  cursor: pointer;
+.img-container img {
+  width: 200px;
+  height: 100%;
+  min-width: 200px;
+  max-width: 200px;
 }
 
 .lunch-items p,
 .dinner-items p {
   max-width: 900px;
-}
-
-.lunch-items .img-container img,
-.dinner-items .img-container img {
-  width: 200px;
-  min-width: 200px;
-  max-width: 200px;
 }
 
 .about {
@@ -218,20 +217,25 @@ body::-webkit-scrollbar-thumb {
 
 footer {
   color: white;
+  position: relative;
   background-color: #202124;
-  height: auto;
+  min-height: 300px;
+  max-height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0 10px;
 }
 
 footer h3 {
+  width: 20%;
   height: 60px;
   display: block;
-  width: 20%;
+  position: absolute;
+  top: 10px;
   border-bottom: 1px solid #f34235;
 }
 
@@ -258,12 +262,6 @@ footer i {
   .about-img-container {
     width: 100px;
     margin-right: 20px;
-  }
-  .lunch-items .img-container img,
-  .dinner-items .img-container img {
-    width: 200px;
-    min-width: 200px;
-    max-width: 200px;
   }
   .lunch-items h6,
   .dinner-items h6 {
@@ -367,6 +365,35 @@ footer i {
   opacity: 1;
 }
 
+.menu-item-content {
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.menu-item-content p {
+  color: black;
+}
+
+.menu-item-preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.more-info-btn {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  background-color: #f34235;
+}
+
 .animated-modal {
   position: relative;
   width: 40%;
@@ -423,6 +450,33 @@ footer i {
   cursor: pointer;
 }
 
+.social-media-icons-container {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px auto 50px auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icon-link {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 576px) {
+  .social-media-icons-container i {
+    font-size: 14px;
+  }
+}
+
+.icon-link {
+  font-size: 12px;
+}
+
 @media (max-width: 576px) {
   .animated-modal {
     min-width: 90%;
@@ -476,12 +530,6 @@ footer i {
     color: white !important;
     background-color: #f34235 !important;
   }
-  .lunch-items .img-container img,
-  .dinner-items .img-container img {
-    width: 200px;
-    min-width: 200px;
-    max-width: 200px;
-  }
   .lunch-items h6,
   .dinner-items h6 {
     font-size: 15px;
@@ -504,6 +552,27 @@ footer i {
        object-fit: cover;
     -webkit-filter: brightness(40%);
             filter: brightness(40%);
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .img-container {
+    width: 100%;
+  }
+  .img-container img {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .menu-item-preview {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .menu-item-preview:nth-last-of-type(1) {
+    margin-bottom: 0px;
   }
 }
 
@@ -613,12 +682,6 @@ footer i {
     color: white !important;
     background-color: #f34235 !important;
   }
-  .lunch-items .img-container img,
-  .dinner-items .img-container img {
-    width: 200px;
-    min-width: 200px;
-    max-width: 200px;
-  }
   .lunch-items h6,
   .dinner-items h6 {
     font-size: 18px;
@@ -719,12 +782,6 @@ footer i {
   .btn:hover {
     color: white !important;
     background-color: #f34235 !important;
-  }
-  .lunch-items .img-container img,
-  .dinner-items .img-container img {
-    width: 200px;
-    min-width: 200px;
-    max-width: 200px;
   }
   .lunch-items h6,
   .dinner-items h6 {
